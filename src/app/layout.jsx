@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <footer className='w-full py-12 border-t border-gray-700'>
-          <h1 className='text-white'>HA</h1>
+          <h1 className='text-white'>Footer</h1>
         </footer>
       </body>
     </html>
