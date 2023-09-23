@@ -4,13 +4,13 @@ import { Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
 import { Fragment, useState } from "react";
 
-export default function NavBar(forwardedRef) {
+export default function NavBar() {
     const [toggle, setToggle] = useState(false);
     const [active, setActive] = useState('');
     const menu = "menu.svg"
     const close = "close.svg"
     return (
-        <nav className='w-full py-4 border-b flex justify-between border-gray-700 '>
+        <nav className='w-full h-16 border-b flex justify-between border-gray-700 fixed z-50  bg-main-black'>
             <ul className="flex items-center gap-8">
                 <li>
                     <Link href={'/'} className='font-black text-[32px] ml-3 cursor-pointer'>
@@ -46,21 +46,20 @@ export default function NavBar(forwardedRef) {
                     </a>
                 </li>
             </ul>
-            <div className="sm:hidden flex flex-1 justify-end items-center">
+            <div className="sm:hidden flex flex-1 justify-end items-center mx-4">
                 <Menu as='div'>
-                    <div>
-                        <Menu.Button
-                        >
+                    <div className="grid place-items-center ">
+                        <Menu.Button className='flex items-center justify-center h-10 w-10'>
                             <img
-                                src={menu}
+                                src={toggle ? close : menu}
                                 alt="menu"
-                                className={`w-[38px] cursor-pointer transition-opacity duration-700 p-2 rounded mt-3 bg-gray-500 bg-opacity-50 dark:bg-transparent ${toggle ? 'opacity-100' : 'opacity-70'
+                                className={`w-[35px] cursor-pointer transition-opacity duration-700 p-2 rounded mt-3 bg-gray-500 bg-opacity-50 dark:bg-transparent ${toggle ? 'opacity-100' : 'opacity-70'
                                     }`}
                                 onClick={() => setToggle(!toggle)}
                             />
-
                         </Menu.Button>
                     </div>
+
                     <Transition
                         as={Fragment}
                         enter='transition ease-out duration-400'
@@ -69,18 +68,8 @@ export default function NavBar(forwardedRef) {
                         leave='transition ease-in duration-300'
                         leaveFrom='transform opacity-100 translate-x-0 '
                         leaveTo='transform opacity-0 translate-x-full'>
-                        <Menu.Items className='absolute right-0 top-0  w-1/2 h-screen origin-top-right divide-y  bg-main-black divide-gray-100 dark:bg-secondBlack border-l py-32'>
+                        <Menu.Items className='absolute right-0 top-16 border-t border-gray-600  w-[70%] h-screen origin-top-right divide-y  bg-main-black z-50 border-l py-32'>
                             <ul className="list-none flex  items-center flex-col  mt-14 gap-10">
-                                <Menu.Button
-                                    className={'absolute right-5 top-6'}>
-                                    <img
-                                        src={close}
-                                        alt="menu"
-                                        className={`w-[38px] cursor-pointer transition-opacity duration-700 p-2 rounded mt-3 bg-gray-500 bg-opacity-50 dark:bg-transparent ${toggle ? 'opacity-100' : 'opacity-70'
-                                            }`}
-                                        onClick={() => setToggle(!toggle)}
-                                    />
-                                </Menu.Button>
                                 <li className='font-semibold text-lg'>
                                     <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150">
                                         About
