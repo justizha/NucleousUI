@@ -63,13 +63,13 @@ export default function NavBar() {
                     <Transition
                         as={Fragment}
                         enter='transition ease-out duration-400'
-                        enterFrom='transform opacity-0 translate-x-full'
-                        enterTo='transform opacity-100 translate-x-0'
+                        enterFrom='transform opacity-0 -translate-x-full'
+                        enterTo='transform opacity-100 -translate-x-0'
                         leave='transition ease-in duration-300'
-                        leaveFrom='transform opacity-100 translate-x-0 '
-                        leaveTo='transform opacity-0 translate-x-full'>
-                        <Menu.Items className='absolute right-0 top-16 border-t border-gray-600  w-[70%] h-screen origin-top-right divide-y  bg-main-black z-50 border-l py-32'>
-                            <ul className="list-none flex  items-center flex-col  mt-14 gap-10">
+                        leaveFrom='transform opacity-100 -translate-x-0 '
+                        leaveTo='transform opacity-0 -translate-x-full'>
+                        <Menu.Items className='absolute left-0 top-16  border-gray-600  w-[60%] h-screen origin-top-right  bg-main-black z-50 border-r py-4'>
+                            <ul className="list-none mx-2 text-start grid mt-14 gap-4">
                                 <li className='font-semibold text-lg'>
                                     <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150">
                                         About
@@ -81,7 +81,7 @@ export default function NavBar() {
                                     </Link>
                                 </li>
                                 <li className='font-semibold text-lg'>
-                                    <a className="p-1 border-gray-300 border rounded flex items-center gap-1 cursor-pointer" href="https://github.com/justizha" target="_blank">
+                                    <a className="p-1 border-gray-300 w-32 border rounded flex items-center gap-1 cursor-pointer" href="https://github.com/justizha" target="_blank">
                                         <img src="/images/github-mark-white.png" alt="github-logo" className="w-5 h-5 object-contain" />
                                         Github
                                     </a>
