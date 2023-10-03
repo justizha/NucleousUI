@@ -2,15 +2,30 @@
 
 import { Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 
 export default function NavBar() {
     const [toggle, setToggle] = useState(false);
-    const [active, setActive] = useState('');
+    const [closeMenu, setCloseMenu] = useState(false);
+    const navRef = useRef(null)
     const menu = "menu.svg"
     const close = "close.svg"
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (navRef.current && !navRef.current.contains(event.target)) {
+                setCloseMenu(true)
+                setTimeout(() => setToggle(false), 300);
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside)
+        }
+    }, [])
     return (
-        <nav className='w-full h-16 border-b flex justify-between border-gray-700 fixed z-50  bg-main-black'>
+        <nav className={`w-full h-16 border-b flex justify-between border-gray-700 fixed z-50 bg-main-black ${closeMenu ? "bg-opacity-70" : ""
+            } `}
+            ref={navRef}>
             <ul className="flex items-center gap-8">
                 <li>
                     <Link href={'/'} className='font-black text-[32px] ml-3 cursor-pointer'>
@@ -53,8 +68,8 @@ export default function NavBar() {
                             <img
                                 src={toggle ? close : menu}
                                 alt="menu"
-                                className={`w-[35px] cursor-pointer transition-opacity duration-700 p-2 rounded mt-3 bg-gray-500 bg-opacity-50 dark:bg-transparent ${toggle ? 'opacity-100' : 'opacity-70'
-                                    }`}
+                                className={`w-[35px] cursor-pointer transition-opacity duration 700 p-2  mt-3 bg-gray-500 bg-opacity-50 dark: bg-transparent ${toggle ? 'opacity-100' : 'opacity-70'
+                                    } `}
                                 onClick={() => setToggle(!toggle)}
                             />
                         </Menu.Button>
