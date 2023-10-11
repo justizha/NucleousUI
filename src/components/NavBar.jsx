@@ -23,8 +23,7 @@ export default function NavBar() {
         }
     }, [])
     return (
-        <nav className={`w-full h-16 border-b flex justify-between border-gray-700 fixed z-50 bg-main-black ${closeMenu ? "bg-opacity-70" : ""
-            } `}
+        <nav className='w-full h-16 border-b flex justify-between border-gray-700 fixed z-50 bg-main-black '
             ref={navRef}>
             <ul className="flex items-center gap-8">
                 <li>
