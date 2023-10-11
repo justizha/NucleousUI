@@ -44,7 +44,7 @@ export default function NavBar() {
             </ul>
             <ul className=' flex-row gap-8 mx-4 md:flex hidden items-center'>
                 <li className='font-semibold text-lg'>
-                    <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150">
+                    <Link href={'/about'} className="text-gray-400 hover:text-gray-200 duration-150">
                         About
                     </Link>
                 </li>
@@ -54,7 +54,7 @@ export default function NavBar() {
                     </Link>
                 </li>
                 <li className='font-semibold text-lg'>
-                    <a className="p-1 border-gray-300 border rounded flex items-center gap-1 cursor-pointer" href="https://github.com/justizha" target="_blank">
+                    <a className="p-1 border-gray-300 border rounded flex items-center gap-1 cursor-pointer" href="https://github.com/justizha/NextDesignComponent" target="_blank">
                         <img src="/images/github-mark-white.png" alt="github-logo" className="w-5 h-5 object-contain" />
                         Github
                     </a>
@@ -85,7 +85,7 @@ export default function NavBar() {
                         <Menu.Items className='absolute left-0 top-16  border-gray-600  w-[60%] h-screen origin-top-right  bg-main-black z-50 border-r py-4'>
                             <ul className="list-none mx-2 text-start grid mt-14 gap-4">
                                 <li className='font-semibold text-lg'>
-                                    <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150">
+                                    <Link href={'/about'} className="text-gray-400 hover:text-gray-200 duration-150">
                                         About
                                     </Link>
                                 </li>
@@ -95,7 +95,7 @@ export default function NavBar() {
                                     </Link>
                                 </li>
                                 <li className='font-semibold text-lg'>
-                                    <a className="p-1 border-gray-300 w-32 border rounded flex items-center gap-1 cursor-pointer" href="https://github.com/justizha" target="_blank">
+                                    <a className="p-1 border-gray-300 w-32 border rounded flex items-center gap-1 cursor-pointer" href="https://github.com/justizha/NextDesignComponent" target="_blank">
                                         <img src="/images/github-mark-white.png" alt="github-logo" className="w-5 h-5 object-contain" />
                                         Github
                                     </a>

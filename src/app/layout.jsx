@@ -57,15 +57,15 @@ export default function RootLayout({ children }) {
           </div>
           <div className='flex justify-between relative top-20  items-center border-t border-gray-600'>
             <div className='mx-10 mt-10'>
-              <p className='text-gray-400'>© Alfath Izha Barikallah</p>
+              <p className='text-gray-400 text-xs md:text-base'>©Alfath Izha Barikallah</p>
             </div>
             <div className='mx-10 mt-10'>
               <div className='flex gap-4 items-center'>
                 <a href="https://www.instagram.com/popflash1z/" className='cursor-pointer' target='_blank'>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="instagram" className='w-6 h-6' />
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="instagram" className='w-6 h-6 object-contain' />
                 </a>
                 <a href="https://www.instagram.com/popflash1z/" className='cursor-pointer' target='_blank'>
-                  <img src="https://freelogopng.com/images/all_img/1690643640twitter-x-icon-png.png" alt="x (tweeter)" className='w-7 h-7' />
+                  <img src="https://freelogopng.com/images/all_img/1690643640twitter-x-icon-png.png" alt="x (tweeter)" className='w-7 h-7 object-contain' />
                 </a>
               </div>
             </div>

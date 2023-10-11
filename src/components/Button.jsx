@@ -2,15 +2,13 @@ import Link from "next/link"
 
 export default function Button(props) {
     return (
-        <Link href={"/"} className="relative  items-center justify-center px-6 py-3 -z-1 overflow-hidden font-bold text-white rounded-md shadow-2xl group">
-            <span className="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-pink-600 via-purple-700 to-blue-400 group-hover:opacity-100"></span>
-            <span className="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
-            <span className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
-            <span className="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
-            <span className="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
-            <span className="absolute inset-0 w-full h-full border border-white rounded-md opacity-10"></span>
-            <span className="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
-            <span className="relative">{props.children}</span>
+        <Link href={'/'} className="relative inline-block text-lg group">
+            <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-100 transition-colors duration-300 ease-out border-2 border-gray-600 rounded-lg group-hover:text-gray-800">
+                <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-main-black"></span>
+                <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-white group-hover:-rotate-180 ease"></span>
+                <span className="relative">{props.children}</span>
+            </span>
+            <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-white rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
         </Link>
     )
 }
