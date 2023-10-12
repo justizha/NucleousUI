@@ -1,10 +1,8 @@
 
 export default function About() {
     return (
-        <section>
-            <h1 className="text-2xl text-white font-bold">
-                About
-            </h1>
+        <section className="pb-24 pt-24">
+            <h1 className="font-bold text-3xl">About This website</h1>
         </section>
     )
 }

@@ -24,23 +24,23 @@ export default function RootLayout({ children }) {
             {/* first footer */}
             <div className='px-4 mt-4'>
               <h1 className='text-[28px] text-white font-black'>NexT-Component.</h1>
-              <p className='text-gray-400'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, natus.</p>
+              <p className='text-gray-400 md:text-base text-sm ml-2 mt-2'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, natus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, quasi?</p>
             </div>
             {/* second footer */}
             <div className='px-4 mt-4'>
               <h1 className='font-bold text-[34px]'>Quick Links.</h1>
-              <ul className='list-none'>
+              <ul className='list-none text-gray-400 ml-2'>
                 <li>
-                  <Link href={"#"}>About</Link>
+                  <Link className='hover:text-gray-200 duration-500 md:text-base text-sm' href={"/about"}>About</Link>
                 </li>
                 <li>
-                  <Link href={"#"}>Guide</Link>
+                  <Link className='hover:text-gray-200 duration-500 md:text-base text-sm' href={"#"}>Guide</Link>
                 </li>
                 <li>
-                  <Link href={'#'}>Design</Link>
+                  <Link className='hover:text-gray-200 duration-500 md:text-base text-sm' href={"#"}>Design</Link>
                 </li>
                 <li>
-                  <Link href={"#"}>Documentation</Link>
+                  <Link className='hover:text-gray-200 duration-500 md:text-base text-sm' href={"#"}>Documentation</Link>
                 </li>
               </ul>
             </div>
@@ -61,10 +61,10 @@ export default function RootLayout({ children }) {
             </div>
             <div className='mx-10 mt-10'>
               <div className='flex gap-4 items-center'>
-                <a href="https://www.instagram.com/popflash1z/" className='cursor-pointer' target='_blank'>
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="instagram" className='w-6 h-6 object-contain' />
+                <a href="https://www.instagram.com/popflash1z/" className='cursor-pointer bg-white' target='_blank'>
+                  <img src="https://seeklogo.com/images/I/instagram-logo-E0067A1403-seeklogo.com.png" alt="instagram" className='w-7 h-7 object-contain' />
                 </a>
-                <a href="https://www.instagram.com/popflash1z/" className='cursor-pointer' target='_blank'>
+                <a href="https://twitter.com/justTh1z" className='cursor-pointer' target='_blank'>
                   <img src="https://freelogopng.com/images/all_img/1690643640twitter-x-icon-png.png" alt="x (tweeter)" className='w-7 h-7 object-contain' />
                 </a>
               </div>
