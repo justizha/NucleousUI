@@ -4,7 +4,7 @@ export default function About() {
         <section className="pb-24 pt-24 mx-auto">
             <h1 className="font-bold text-5xl">About This website</h1>
             <div className="flex justify-center mt-10 ">
-                <div className=" border rounded-md p-1 md:w-1/2 w-full flex justify-between shadow-project">
+                <div className=" border rounded-md p-1 md:w-1/2 w-full flex justify-between hover:shadow-project duration-500 shadow-slate-200 shadow-md">
                     <div className="flex flex-col">
                         <h1 className="font-semibold text-2xl">The guy behind all of this.</h1>
                         <p className="text-gray-400 text-base mt-5">
@@ -13,8 +13,7 @@ export default function About() {
                     </div>
                     <img src="/images/profile.png" alt="profile"  className=" rounded h-44 w-44 object-contain "/>
                 </div>
-            </div>
-           
+            </div>  
         </section>
     )
 }
