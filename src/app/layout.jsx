@@ -1,21 +1,17 @@
-
 import NavBar from '@/components/NavBar';
 import Link from 'next/link';
 import './globals.css';
 
 export const metadata = {
   title: 'NextComponent',
-
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-
       <body>
         <main className='bg-main-black'>
           <NavBar>
-
           </NavBar>
           {children}
         </main>
@@ -51,8 +47,6 @@ export default function RootLayout({ children }) {
 
               </ul>
             </div>
-
-
             {/* bottom/ last section */}
           </div>
           <div className='flex justify-between relative top-20  items-center border-t border-gray-600'>

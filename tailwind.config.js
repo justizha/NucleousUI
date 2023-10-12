@@ -14,6 +14,9 @@ module.exports = {
       },
       backgroundColor : {
         'main-black' : ' #121212'
+      },
+      boxShadow : {
+        project: " 15px 15px #565c63"
       }
     },
   },
