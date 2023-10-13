@@ -90,6 +90,11 @@ export default function NavBar() {
                         leaveTo='transform opacity-0 -translate-x-full'>
                         <Menu.Items className='absolute left-0 top-16  border-gray-600  w-[60%] h-screen origin-top-right  bg-main-black z-50 border-r py-4'>
                             <ul className="list-none mx-2 text-start grid mt-14 gap-4">
+                                <li className="text-lg">
+                                    <Link href={'/'} className="font-semibold text-white">
+                                        NexT
+                                    </Link>
+                                </li>
                                 <li className=' text-base'>
                                     <Link href={'/about'} className="text-gray-400 hover:text-gray-200 duration-150">
                                         About
@@ -101,10 +106,14 @@ export default function NavBar() {
                                     </Link>
                                 </li>
                                 <li className=' text-base'>
-                                    <a className="p-1 border-gray-300 w-32 border rounded flex items-center gap-1 cursor-pointer" href="https://github.com/justizha/NextDesignComponent" target="_blank">
-                                        <img src="/images/github-mark-white.png" alt="github-logo" className="w-5 h-5 object-contain" />
-                                        Github
-                                    </a>
+                                    <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150">
+                                        Blogs
+                                    </Link>
+                                </li>
+                                <li className=' text-base'>
+                                    <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150  text-base">
+                                        Design
+                                    </Link>
                                 </li>
                             </ul>
                         </Menu.Items>

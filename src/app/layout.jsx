@@ -64,8 +64,24 @@ export default function RootLayout({ children }) {
             <div className='px-4 mt-4'>
               <h1 className='font-semibold text-base'>Contacts.</h1>
               <ul className='list-none'>
-
+                <li className='text-sm text-gray-400'>
+                  <p>+ 62-831-0630-7593</p>
+                </li>
+                <li className='text-sm text-gray-400'>
+                  <p className='break-words'>alfathizhaaaaaaa@gmail.com</p>
+                </li>
+                <li></li>
               </ul>
+              <div className='mt-10'>
+                <div className='flex gap-4 items-center'>
+                  <a href="https://www.instagram.com/popflash1z/" className='cursor-pointer bg-white' target='_blank'>
+                    <img src="https://seeklogo.com/images/I/instagram-logo-E0067A1403-seeklogo.com.png" alt="instagram" className='w-7 h-7 object-contain' />
+                  </a>
+                  <a href="https://twitter.com/justTh1z" className='cursor-pointer' target='_blank'>
+                    <img src="https://freelogopng.com/images/all_img/1690643640twitter-x-icon-png.png" alt="x (tweeter)" className='w-7 h-7 object-contain' />
+                  </a>
+                </div>
+              </div>
             </div>
             {/* bottom/ last section */}
           </div>
@@ -73,16 +89,7 @@ export default function RootLayout({ children }) {
             <div className='mx-10 mt-10'>
               <p className='text-gray-400 text-xs '>©Alfath Izha Barikallah</p>
             </div>
-            <div className='mx-10 mt-10'>
-              <div className='flex gap-4 items-center'>
-                <a href="https://www.instagram.com/popflash1z/" className='cursor-pointer bg-white' target='_blank'>
-                  <img src="https://seeklogo.com/images/I/instagram-logo-E0067A1403-seeklogo.com.png" alt="instagram" className='w-7 h-7 object-contain' />
-                </a>
-                <a href="https://twitter.com/justTh1z" className='cursor-pointer' target='_blank'>
-                  <img src="https://freelogopng.com/images/all_img/1690643640twitter-x-icon-png.png" alt="x (tweeter)" className='w-7 h-7 object-contain' />
-                </a>
-              </div>
-            </div>
+
           </div>
         </footer>
       </body>
