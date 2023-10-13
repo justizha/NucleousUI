@@ -9,27 +9,27 @@ export default function NavBar() {
     const menu = "menu.svg";
     const close = "close.svg";    
     const navRef = useRef(null);
-
     const isMobile = () => {
-        const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+        const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         return width < 640;
-    }
+    };
+
     useEffect(() => {
-        if(toggle && isMobile()){
-            document.addEventListener('mousedown',handleClickOutside)
+        if (toggle && isMobile()) {
+            document.addEventListener('mousedown', handleClickOutside);
         } else {
-            document.removeEventListener('mousedown',handleClickOutside)
+            document.removeEventListener('mousedown', handleClickOutside);
         }
         return () => {
-            document.removeEventListener('mousedown',handleClickOutside)
+            document.removeEventListener('mousedown', handleClickOutside);
         };
-    },[toggle]);
+    }, [toggle]);
 
     const handleClickOutside = (event) => {
-        if (navRef.current && !navRef.current.contains(event.target)){
-            setToggle(false)
+        if (navRef.current && !navRef.current.contains(event.target)) {
+            setToggle(false);
         }
-    }
+    };
     return (
         <nav className='w-full h-16 border-b flex justify-between border-gray-700 fixed z-50 bg-main-black ' ref={navRef}>
             <ul className="flex items-center gap-8">
