@@ -15,8 +15,8 @@ export default function RootLayout({ children }) {
           </NavBar>
           {children}
         </main>
-        <footer className='w-full border-t border-gray-700 bg-main-black pb-32'>
-          <div className='md:flex md:justify-center md:gap-32 grid grid-cols-2 mx-auto'>
+        <footer className='w-full border-t border-gray-700 bg-main-black pb-24'>
+          <div className='md:flex md:justify-center md:gap-24 grid grid-cols-2 mx-auto'>
             {/* first footer */}
             <div className='px-4 mt-4'>
               <h1 className='text-base text-white font-black'>NexT-Component.</h1>
@@ -43,14 +43,18 @@ export default function RootLayout({ children }) {
             <div className='px-4 mt-4'>
               <h1 className='font-semibold text-base'>More</h1>
               <ul className='text-gray-400'>
-                <li className='hover:text-gray-200 duration-560  text-sm'>
-                  Github
+                <li className='hover:text-gray-200 duration-560 text-sm'>
+                  <a href="https://github.com/justizha/NextDesignComponent">
+                    Github
+                  </a>
                 </li>
-                <li className='hover:text-gray-200 duration-560  text-sm'>
-                  Release
+                <li className='hover:text-gray-200 duration-560 text-sm'>
+                  <a href="https://github.com/justizha/NextDesignComponent/releases">
+                    Release
+                  </a>
                 </li>
-                <li className='hover:text-gray-200 duration-500  text-sm'>
-                  <a href="https://github.com/justizha/NextDesignComponent/releases" className='cursor-pointer' target='_blank'>
+                <li className='hover:text-gray-200 duration-500 text-sm'>
+                  <a href="https://nextjs.org/docs" className='cursor-pointer' target='_blank'>
                     Learn Next js
                   </a>
                 </li>

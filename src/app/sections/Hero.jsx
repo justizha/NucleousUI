@@ -10,19 +10,17 @@ export default function Hero() {
                 <p className="text-md md:text-base text-start lg:text-lg text-sm font-normal text-gray-400 mt-8">
                     Speed up your website development with ready-to-use components, which are not only customizable but also completely free, making the whole process faster and more convenient.
                 </p>
-                <div className="justify-start flex mt-14 ">
+                <div className="justify-start flex mt-14 gap-10">
                     <Button>Components</Button>
                 </div>
             </div>
             <div className="grid grid-cols-2 gap-2 mx-auto">
                 {/* Absolute divs */}
-                <div className="bg-gray-500 bg-opacity-50 md:w-40 w-full rounded h-40 "></div>
-                <div className="bg-gray-500 bg-opacity-50 md:w-40 w-full rounded h-40 "></div>
-                <div className="bg-gray-500 bg-opacity-50 md:w-40 w-full rounded h-40 "></div>
-                <div className="bg-gray-500 bg-opacity-50 md:w-40 w-full rounded h-40"></div>
+                <div className="hover:-rotate-6 duration-200 hover:-translate-x-5 hover:-translate-y-3 transform bg-gray-500 bg-opacity-50 md:w-40 w-full rounded h-40 "></div>
+                <div className="hover:rotate-12 duration-200 hover:translate-x-5 hover:-translate-y-3 transform bg-gray-500 bg-opacity-50 md:w-40 w-full rounded h-40 "></div>
+                <div className="hover:-rotate-12 duration-200 hover:-translate-x-6 hover:translate-y-3  transform bg-gray-500 bg-opacity-50 md:w-40 w-full rounded h-40 "></div>
+                <div className="hover:rotate-12 duration-200  hover:translate-x-6 hover:translate-y-3 transform bg-gray-500 bg-opacity-50 md:w-40 w-full rounded h-40"></div>
             </div>
-
-
         </section>
     );
 }

@@ -7,7 +7,7 @@ import { Fragment, useEffect, useRef, useState } from "react";
 export default function NavBar() {
     const [toggle, setToggle] = useState(false);
     const menu = "menu.svg";
-    const close = "close.svg";    
+    const close = "close.svg";
     const navRef = useRef(null);
     const isMobile = () => {
         const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -61,10 +61,9 @@ export default function NavBar() {
                     </Link>
                 </li>
                 <li className=' text-base'>
-                    <a className="p-1 border-gray-300 border rounded flex items-center gap-1 cursor-pointer" href="https://github.com/justizha/NextDesignComponent" target="_blank">
-                        <img src="/images/github-mark-white.png" alt="github-logo" className="w-5 h-5 object-contain" />
-                        Github
-                    </a>
+                    <Link href={'/blog'} className="text-gray-400 hover:text-gray-200 duration-150">
+                        Blogs
+                    </Link>
                 </li>
             </ul>
             <div className="sm:hidden flex flex-1 justify-end items-center mx-4">
