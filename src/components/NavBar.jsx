@@ -6,23 +6,32 @@ import { Fragment, useEffect, useRef, useState } from "react";
 
 export default function NavBar() {
     const [toggle, setToggle] = useState(false);
-    const navRef = useRef(null)
-    const menu = "menu.svg"
-    const close = "close.svg"
+    const menu = "menu.svg";
+    const close = "close.svg";    
+    const navRef = useRef(null);
+
+    const isMobile = () => {
+        const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+        return width < 640;
+    }
     useEffect(() => {
-        function handleClickOutside(event) {
-            if (window.innerWidth <= 640 && navRef.current && !navRef.current.contains(event.target)) {
-                setToggle(false);
-            }
+        if(toggle && isMobile()){
+            document.addEventListener('mousedown',handleClickOutside)
+        } else {
+            document.removeEventListener('mousedown',handleClickOutside)
         }
-        document.addEventListener('mousedown', handleClickOutside);
         return () => {
-            document.removeEventListener('mousedown', handleClickOutside)
+            document.removeEventListener('mousedown',handleClickOutside)
+        };
+    },[toggle]);
+
+    const handleClickOutside = (event) => {
+        if (navRef.current && !navRef.current.contains(event.target)){
+            setToggle(false)
         }
-    }, [])
+    }
     return (
-        <nav className='w-full h-16 border-b flex justify-between border-gray-700 fixed z-50 bg-main-black '
-            ref={navRef}>
+        <nav className='w-full h-16 border-b flex justify-between border-gray-700 fixed z-50 bg-main-black ' ref={navRef}>
             <ul className="flex items-center gap-8">
                 <li>
                     <Link href={'/'} className='font-black text-[32px] ml-3 cursor-pointer'>
@@ -30,28 +39,28 @@ export default function NavBar() {
                     </Link>
                 </li>
                 <li className="md:flex hidden">
-                    <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150 font-semibold text-lg">
+                    <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150  text-base">
                         Design
                     </Link>
                 </li>
                 <li className="md:flex hidden">
-                    <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150 font-semibold text-lg">
+                    <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150  text-base">
                         Docs
                     </Link>
                 </li>
             </ul>
             <ul className=' flex-row gap-8 mx-4 md:flex hidden items-center'>
-                <li className='font-semibold text-lg'>
+                <li className=' text-base'>
                     <Link href={'/about'} className="text-gray-400 hover:text-gray-200 duration-150">
                         About
                     </Link>
                 </li>
-                <li className='font-semibold text-lg'>
+                <li className=' text-base'>
                     <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150">
                         Contact
                     </Link>
                 </li>
-                <li className='font-semibold text-lg'>
+                <li className=' text-base'>
                     <a className="p-1 border-gray-300 border rounded flex items-center gap-1 cursor-pointer" href="https://github.com/justizha/NextDesignComponent" target="_blank">
                         <img src="/images/github-mark-white.png" alt="github-logo" className="w-5 h-5 object-contain" />
                         Github
@@ -82,17 +91,17 @@ export default function NavBar() {
                         leaveTo='transform opacity-0 -translate-x-full'>
                         <Menu.Items className='absolute left-0 top-16  border-gray-600  w-[60%] h-screen origin-top-right  bg-main-black z-50 border-r py-4'>
                             <ul className="list-none mx-2 text-start grid mt-14 gap-4">
-                                <li className='font-semibold text-lg'>
+                                <li className=' text-base'>
                                     <Link href={'/about'} className="text-gray-400 hover:text-gray-200 duration-150">
                                         About
                                     </Link>
                                 </li>
-                                <li className='font-semibold text-lg'>
+                                <li className=' text-base'>
                                     <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150">
                                         Contact
                                     </Link>
                                 </li>
-                                <li className='font-semibold text-lg'>
+                                <li className=' text-base'>
                                     <a className="p-1 border-gray-300 w-32 border rounded flex items-center gap-1 cursor-pointer" href="https://github.com/justizha/NextDesignComponent" target="_blank">
                                         <img src="/images/github-mark-white.png" alt="github-logo" className="w-5 h-5 object-contain" />
                                         Github

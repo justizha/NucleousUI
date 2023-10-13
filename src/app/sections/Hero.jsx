@@ -10,7 +10,7 @@ export default function Hero() {
                 <p className="text-md md:text-base text-start lg:text-lg text-sm font-normal text-gray-400 mt-8">
                     Speed up your website development with ready-to-use components, which are not only customizable but also completely free, making the whole process faster and more convenient.
                 </p>
-                <div>
+                <div className="justify-start flex mt-14 ">
                     <Button>Components</Button>
                 </div>
             </div>
