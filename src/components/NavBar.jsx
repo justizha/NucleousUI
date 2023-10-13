@@ -11,8 +11,8 @@ export default function NavBar() {
     const close = "close.svg"
     useEffect(() => {
         function handleClickOutside(event) {
-            if ( window.innerWidth <= 640 && navRef.current && !navRef.current.contains(event.target)){
-                setToggle(false)
+            if (window.innerWidth <= 640 && navRef.current && !navRef.current.contains(event.target)) {
+                setToggle(false);
             }
         }
         document.addEventListener('mousedown', handleClickOutside);
