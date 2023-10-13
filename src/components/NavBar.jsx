@@ -6,15 +6,13 @@ import { Fragment, useEffect, useRef, useState } from "react";
 
 export default function NavBar() {
     const [toggle, setToggle] = useState(false);
-    const [closeMenu, setCloseMenu] = useState(false);
     const navRef = useRef(null)
     const menu = "menu.svg"
     const close = "close.svg"
     useEffect(() => {
         function handleClickOutside(event) {
-            if (navRef.current && !navRef.current.contains(event.target)) {
-                setCloseMenu(true)
-                setTimeout(() => setToggle(false), 300);
+            if ( window.innerWidth <= 640 && navRef.current && !navRef.current.contains(event.target)){
+                setToggle(false)
             }
         }
         document.addEventListener('mousedown', handleClickOutside);
