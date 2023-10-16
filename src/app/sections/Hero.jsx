@@ -14,12 +14,12 @@ export default function Hero() {
                     <Button>Components</Button>
                 </div>
             </div>
-            <div className="grid grid-cols-2 gap-2 mx-auto">
+            <div className="grid grid-cols-2 gap-2 mx-8">
                 {/* Absolute divs */}
-                <div className="hover:-rotate-6 duration-200 hover:-translate-x-5 hover:-translate-y-3 transform bg-gray-500 bg-opacity-50 md:w-40 w-full rounded h-40 "></div>
-                <div className="hover:rotate-12 duration-200 hover:translate-x-5 hover:-translate-y-3 transform bg-gray-500 bg-opacity-50 md:w-40 w-full rounded h-40 "></div>
-                <div className="hover:-rotate-12 duration-200 hover:-translate-x-6 hover:translate-y-3  transform bg-gray-500 bg-opacity-50 md:w-40 w-full rounded h-40 "></div>
-                <div className="hover:rotate-12 duration-200  hover:translate-x-6 hover:translate-y-3 transform bg-gray-500 bg-opacity-50 md:w-40 w-full rounded h-40"></div>
+                <div className="hover:-rotate-6 duration-200 hover:-translate-x-5 hover:-translate-y-3 transform bg-gray-500 bg-opacity-50 md:w-40 w-full rounded h-40 md:h-full"></div>
+                <div className="hover:rotate-12 duration-200 hover:translate-x-5 hover:-translate-y-3 transform bg-gray-500 bg-opacity-50 md:w-40 w-full rounded h-40 md:h-full"></div>
+                <div className="hover:-rotate-12 duration-200 hover:-translate-x-6 hover:translate-y-3  transform bg-gray-500 bg-opacity-50 md:w-40 w-full rounded h-40 md:h-full"></div>
+                <div className="hover:rotate-12 duration-200  hover:translate-x-6 hover:translate-y-3 transform bg-gray-500 bg-opacity-50 md:w-40 w-full rounded h-40 md:h-full"></div>
             </div>
         </section>
     );
