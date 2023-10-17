@@ -10,8 +10,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <main className='bg-main-black'>
-          <NavBar>
-          </NavBar>
+          <NavBar></NavBar>
           {children}
         </main>
         <footer className='w-full border-t border-gray-700 bg-main-black pb-24'>
