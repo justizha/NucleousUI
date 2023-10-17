@@ -1,7 +1,6 @@
 import NavBar from '@/components/NavBar';
 import Link from 'next/link';
 import './globals.css';
-
 export const metadata = {
   title: 'NextComponent',
 }
@@ -10,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <main className='bg-main-black'>
+        <main className=''>
           <NavBar>
           </NavBar>
           {children}
@@ -18,9 +17,7 @@ export default function RootLayout({ children }) {
         <footer className='w-full border-t border-gray-700 bg-main-black pb-24'>
           <div className='md:flex md:justify-center md:gap-24 grid grid-cols-2 mx-auto'>
             {/* first footer */}
-            <div className='px-4 mt-4'>
-              <h1 className='text-base text-white font-black'>NexT-Component.</h1>
-            </div>
+
             {/* second footer */}
             <div className='px-4 mt-4'>
               <h1 className='font-semibold text-base'>Resources</h1>
@@ -70,9 +67,11 @@ export default function RootLayout({ children }) {
                 <li className='text-sm text-gray-400'>
                   <p className='break-words'>alfathizhaaaaaaa@gmail.com</p>
                 </li>
-                <li></li>
               </ul>
-              <div className='mt-10'>
+            </div>
+            <div className='px-4 mt-4'>
+              <h1 className='font-semibold text-base'>Socials.</h1>
+              <div className='mt-2'>
                 <div className='flex gap-4 items-center'>
                   <a href="https://www.instagram.com/popflash1z/" className='cursor-pointer bg-white' target='_blank'>
                     <img src="https://seeklogo.com/images/I/instagram-logo-E0067A1403-seeklogo.com.png" alt="instagram" className='w-7 h-7 object-contain' />
@@ -89,9 +88,12 @@ export default function RootLayout({ children }) {
             <div className='mx-10 mt-10'>
               <p className='text-gray-400 text-xs '>©Alfath Izha Barikallah</p>
             </div>
-
+            <div className='px-4 mt-4'>
+              <h1 className='text-base text-white font-black'>NexT-Component.</h1>
+            </div>
           </div>
         </footer>
+
       </body>
     </html>
   )

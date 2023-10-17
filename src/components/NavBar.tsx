@@ -3,7 +3,7 @@
 import { Menu, Transition } from "@headlessui/react";
 import Link from "next/link";
 import { Fragment, useEffect, useRef, useState } from "react";
-
+import BtnMode from "./BtnMode";
 export default function NavBar() {
     const [toggle, setToggle] = useState(false);
     const menu = "menu.svg";
@@ -64,6 +64,9 @@ export default function NavBar() {
                     <Link href={'/blog'} className="text-gray-400 hover:text-gray-200 duration-150">
                         Blogs
                     </Link>
+                </li>
+                <li className="text-base">
+                    <BtnMode></BtnMode>
                 </li>
             </ul>
             <div className="sm:hidden flex flex-1 justify-end items-center mx-4">

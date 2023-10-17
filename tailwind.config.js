@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  
+  darkMode: 'class',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -13,7 +15,14 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       backgroundColor : {
-        'main-black' : ' #121212'
+        'main-black' : ' #121212',
+        'main-white' : '#FFF5EE',
+        'main-gray' : '#696969'
+      },
+      textColor :{
+        'main-black' : ' #121212',
+        'main-white' : '#FFF5EE',
+        'main-gray' : '#696969'
       },
       boxShadow : {
         project: " 15px 15px #565c63"
