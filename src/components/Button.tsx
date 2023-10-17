@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function Button(props) {
+export default function Button(props: any) {
     return (
         <Link href={'/'} {...props} className="relative inline-block text-lg group">
             <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-100 transition-colors duration-300 ease-out border-2 border-gray-600 rounded-lg group-hover:text-gray-800">

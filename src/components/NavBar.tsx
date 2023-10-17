@@ -25,7 +25,7 @@ export default function NavBar() {
         };
     }, [toggle]);
 
-    const handleClickOutside = (event) => {
+    const handleClickOutside = (event: any) => {
         if (navRef.current && !navRef.current.contains(event.target)) {
             setToggle(false);
         }

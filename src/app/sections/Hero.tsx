@@ -7,7 +7,7 @@ export default function Hero() {
                 <h1 className="font-black lg:text-6xl md:text-4xl text-[44px] tracking-tight lg:mb-7 mb-8">
                     NexT Component
                 </h1>
-                <p className="text-md md:text-base text-start lg:text-lg text-sm font-normal text-gray-400 mt-8">
+                <p className="text-md md:text-base text-start lg:text-lg text-sm font-normal text-main-gray mt-8">
                     Speed up your website development with ready-to-use components, which are not only customizable but also completely free, making the whole process faster and more convenient.
                 </p>
                 <div className="justify-start flex mt-14 gap-10">

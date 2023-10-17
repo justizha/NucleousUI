@@ -14,15 +14,14 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-      backgroundColor : {
+      colors : {
         'main-black' : ' #121212',
         'main-white' : '#FFF5EE',
-        'main-gray' : '#696969'
-      },
-      textColor :{
-        'main-black' : ' #121212',
-        'main-white' : '#FFF5EE',
-        'main-gray' : '#696969'
+        'main-gray' : '#696969',
+        'main-orange' : '#ff5722',
+        'main-blue' : "#03a8f4",
+        'main-green' : '#8bc34a',
+        'main-amber' : '#FFC107'
       },
       boxShadow : {
         project: " 15px 15px #565c63"
