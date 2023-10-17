@@ -1,5 +1,5 @@
-import NavBar from '@/components/NavBar';
 import Link from 'next/link';
+import NavBar from '../components/NavBar';
 import './globals.css';
 export const metadata = {
   title: 'NextComponent',
@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <main className=''>
+        <main className='bg-main-black'>
           <NavBar>
           </NavBar>
           {children}
