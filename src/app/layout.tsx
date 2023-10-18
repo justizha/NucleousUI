@@ -14,43 +14,43 @@ export default function RootLayout({ children }) {
           <NavBar></NavBar>
           {children}
         </main>
-        <footer className='w-full border-t border-gray-700 bg-main-black pb-24'>
+        <footer className='w-full border-t border-gray-700 bg-main-black pb-20'>
           <div className='md:flex md:justify-center md:gap-24 grid grid-cols-2 mx-auto'>
             {/* first footer */}
 
             {/* second footer */}
-            <div className='px-4 mt-4'>
+            <div className='px-4 mt-4 mb-2'>
               <h1 className='font-semibold text-base'>Resources</h1>
               <ul className='list-none text-gray-400'>
-                <li>
+                <li className='mb-3'>
                   <Link className='hover:text-gray-200 duration-500  text-sm' href={"/about"}>About</Link>
                 </li>
-                <li>
+                <li className='mb-3'>
                   <Link className='hover:text-gray-200 duration-500  text-sm' href={"#"}>Guide</Link>
                 </li>
-                <li>
+                <li className='mb-3'>
                   <Link className='hover:text-gray-200 duration-500  text-sm' href={"#"}>Design</Link>
                 </li>
-                <li>
+                <li className='mb-3'>
                   <Link className='hover:text-gray-200 duration-500  text-sm' href={"#"}>Docs</Link>
                 </li>
               </ul>
             </div>
             {/* third footer */}
             <div className='px-4 mt-4'>
-              <h1 className='font-semibold text-base'>More</h1>
+              <h1 className='font-semibold text-base mb-2'>More</h1>
               <ul className='text-gray-400'>
-                <li className='hover:text-gray-200 duration-560 text-sm'>
+                <li className='hover:text-gray-200 duration-560 text-sm mb-3'>
                   <a href="https://github.com/justizha/NextDesignComponent">
                     Github
                   </a>
                 </li>
-                <li className='hover:text-gray-200 duration-560 text-sm'>
+                <li className='hover:text-gray-200 duration-560 text-sm mb-3'>
                   <a href="https://github.com/justizha/NextDesignComponent/releases">
                     Release
                   </a>
                 </li>
-                <li className='hover:text-gray-200 duration-500 text-sm'>
+                <li className='hover:text-gray-200 duration-500 text-sm mb-3'>
                   <a href="https://nextjs.org/docs" className='cursor-pointer' target='_blank'>
                     Learn Next js
                   </a>
