@@ -7,7 +7,7 @@ export default function Tech() {
                 <h4 className="text-center text-main-gray md:text-lg text-sm mt-4 mx-4">Here are the Framework,Libraries and Language used in this website.</h4>
             </div>
             <div className="flex justify-center md:mx-10 mt-10">
-                <div className="grid md:grid-cols-4 md:gap-8 gap-4">
+                <div className="grid md:grid-cols-4 md:gap-8 gap-5">
                     {dataTech.map((data, index) => (
                         <div key={index} className="bg-[#43464B] hover:shadow-md duration-200 hover:scale-105 w-[300px] h-44 flex flex-col rounded hover:shadow-main-white p-2">
                             <div className="h-32 flex items-center justify-center p-4">
