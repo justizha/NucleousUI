@@ -1,7 +1,9 @@
 "use client";
 
 import { Menu, Transition } from "@headlessui/react";
+import { motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Fragment, useEffect, useRef, useState } from "react";
 import BtnMode from "./BtnMode";
 export default function NavBar() {
@@ -13,7 +15,6 @@ export default function NavBar() {
         const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         return width < 640;
     };
-
     useEffect(() => {
         if (toggle && isMobile()) {
             document.addEventListener('mousedown', handleClickOutside);
@@ -24,12 +25,21 @@ export default function NavBar() {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [toggle]);
-
     const handleClickOutside = (event: any) => {
         if (navRef.current && !navRef.current.contains(event.target)) {
             setToggle(false);
         }
     };
+    const LinkLeftSide = [
+        { href: "/design", title: "Design" },
+        { href: "/docs", title: "Docs" },
+    ]
+    const LinkRightSide = [
+        { href: "/about", title: "About" },
+        { href: "/blog", title: "Blogs" },
+        { href: "/contact", title: "Contact" }
+    ]
+    const path = usePathname()
     return (
         <nav className='w-full h-16 border-b flex justify-between border-gray-700 fixed z-50 bg-main-black ' ref={navRef}>
             <ul className="flex items-center gap-8">
@@ -38,33 +48,32 @@ export default function NavBar() {
                         NexT
                     </Link>
                 </li>
-                <li className="md:flex hidden">
-                    <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150  text-base">
-                        Design
-                    </Link>
-                </li>
-                <li className="md:flex hidden">
-                    <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150  text-base">
-                        Docs
-                    </Link>
-                </li>
+                {LinkLeftSide.map((link) => (
+                    <li key={link.href} className="md:flex hidden">
+                        <Link href={link.href} className="text-gray-400 relative hover:text-gray-200 duration-150  text-base">
+                            {link.href === path && (
+                                <motion.span
+                                    layoutId="underline"
+                                    className="absolute left-0 top-full h-[1px] bg-main-white w-full" />
+                            )}
+                            {link.title}
+                        </Link>
+                    </li>
+                ))}
             </ul>
             <ul className=' flex-row gap-8 mx-4 md:flex hidden items-center'>
-                <li className=' text-base'>
-                    <Link href={'/about'} className="text-gray-400 hover:text-gray-200 duration-150">
-                        About
-                    </Link>
-                </li>
-                <li className=' text-base'>
-                    <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150">
-                        Contact
-                    </Link>
-                </li>
-                <li className=' text-base'>
-                    <Link href={'/blog'} className="text-gray-400 hover:text-gray-200 duration-150">
-                        Blogs
-                    </Link>
-                </li>
+                {LinkRightSide.map((link) => (
+                    <li className=' text-base' key={link.href}>
+                        <Link href={link.href} className="text-gray-400 relative hover:text-gray-200 duration-150">
+                            {link.href === path && (
+                                <motion.span
+                                    layoutId="underline"
+                                    className="absolute left-0 top-full h-[1px] bg-main-white w-full" />
+                            )}
+                            {link.title}
+                        </Link>
+                    </li>
+                ))}
                 <li className="text-base">
                     <BtnMode></BtnMode>
                 </li>

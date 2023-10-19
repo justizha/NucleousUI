@@ -1,8 +1,8 @@
 import Tech from "./aboutSections/Tech";
-
+import PageWrapper from "../../components/PageWrapper";
 export default function About() {
     return (
-        <>
+        <PageWrapper>
             <section className="pb-24 pt-24 md:mx-24 mx-10 md:flex md:justify-between ">
                 <div className="flex mt-14 flex-col md:mx-8">
                     <h1 className="text-3xl font-semibold">About</h1>
@@ -22,6 +22,6 @@ export default function About() {
                 </div>
             </section>
             <Tech />
-        </>
+        </PageWrapper>
     )
 }
