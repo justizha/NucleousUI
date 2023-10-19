@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
             </div>
             {/* second footer */}
             <div className='px-4 mt-4 mb-2'>
-              <h1 className='font-semibold text-base'>Resources</h1>
+              <h1 className='font-semibold text-base text-white'>Resources</h1>
               <ul className='list-none text-gray-400'>
                 <li className='mb-3'>
                   <Link className='hover:text-gray-200 duration-500  text-sm' href={"/about"}>About</Link>
@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
             </div>
             {/* third footer */}
             <div className='px-4 mt-4'>
-              <h1 className='font-semibold text-base mb-2'>More</h1>
+              <h1 className='font-semibold text-base text-white mb-2'>More</h1>
               <ul className='text-gray-400'>
                 <li className='hover:text-gray-200 duration-560 text-sm mb-3'>
                   <a href="https://github.com/justizha/NextDesignComponent">
@@ -65,7 +65,7 @@ export default function RootLayout({ children }) {
             </div>
             {/* fourth footer */}
             <div className='px-4 mt-4'>
-              <h1 className='font-semibold text-base'>Contacts.</h1>
+              <h1 className='font-semibold text-base text-white'>Contacts.</h1>
               <ul className='list-none'>
                 <li className='text-sm text-gray-400'>
                   <p>+ 62-831-0630-7593</p>
@@ -76,7 +76,7 @@ export default function RootLayout({ children }) {
               </ul>
             </div>
             <div className='px-4 mt-4'>
-              <h1 className='font-semibold text-base'>Socials.</h1>
+              <h1 className='font-semibold text-base text-white'>Socials.</h1>
               <div className='mt-2'>
                 <div className='flex gap-4 items-center'>
                   <a href="https://www.instagram.com/popflash1z/" className='cursor-pointer bg-white' target='_blank'>

@@ -4,7 +4,7 @@ export default function Hero() {
     return (
         <section className="px-4 lg:pt-28 lg:pb-24 pt-32 pb-28 border-b border-gray-600 md:flex md:justify-between ">
             <div className="px-4 lg:px-4 z-10 py-4 md:w-1/2 flex flex-col">
-                <h1 className="font-black lg:text-6xl md:text-4xl text-[44px] tracking-tight lg:mb-7 mb-8">
+                <h1 className="font-black lg:text-6xl md:text-4xl text-[44px] tracking-tight lg:mb-7 mb-8 text-white">
                     NexT Component
                 </h1>
                 <p className="text-md md:text-base text-start lg:text-lg text-sm font-normal text-main-gray mt-8">

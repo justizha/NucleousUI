@@ -1,11 +1,11 @@
-import Tech from "./aboutSections/Tech";
 import PageWrapper from "../../components/PageWrapper";
+import Tech from "./aboutSections/Tech";
 export default function About() {
     return (
         <PageWrapper>
             <section className="pb-24 pt-24 md:mx-24 mx-10 md:flex md:justify-between ">
                 <div className="flex mt-14 flex-col md:mx-8">
-                    <h1 className="text-3xl font-semibold">About</h1>
+                    <h1 className="text-3xl font-semibold text-white">About</h1>
                     <p className=" md:text-base text-start  text-sm font-normal text-main-gray mt-8 md:w-[48%]">
                         Check out why this website exists and what cool tech stuff it's packing! It's like a digital toolbox that's all about making the web-building process easy and customizable. With a bunch of super cool tools and tricks up its sleeve, this site helps you create awesome and dynamic web content without any hassle
                     </p>

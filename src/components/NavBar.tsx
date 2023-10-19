@@ -42,7 +42,7 @@ export default function NavBar() {
         <nav className='w-full h-16 border-b flex justify-between border-gray-700 fixed z-50 bg-main-black ' ref={navRef}>
             <ul className="flex items-center gap-8">
                 <li>
-                    <Link href={'/'} className='font-black text-[32px] ml-3 cursor-pointer'>
+                    <Link href={'/'} className='font-black text-[32px] ml-3 cursor-pointer text-white'>
                         NexT
                     </Link>
                 </li>
