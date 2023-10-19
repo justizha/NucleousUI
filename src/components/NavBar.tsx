@@ -38,6 +38,7 @@ export default function NavBar() {
         { href: "/contact", title: "Contact" }
     ]
     const path = usePathname()
+
     return (
         <nav className='w-full h-16 border-b flex justify-between border-gray-700 fixed z-50 bg-main-black ' ref={navRef}>
             <ul className="flex items-center gap-8">
@@ -48,11 +49,11 @@ export default function NavBar() {
                 </li>
                 {LinkLeftSide.map((link) => (
                     <li key={link.href} className="md:flex hidden">
-                        <Link href={link.href} className="text-gray-400 relative hover:text-gray-200 duration-150  text-base">
+                        <Link href={link.href} className={`text-gray-400 relative hover:text-gray-200 duration-150  text-base ${link.href === path ? 'activeLink' : ''}`} >
                             {link.href === path && (
                                 <motion.span
                                     layoutId="underline"
-                                    className="absolute left-0 top-full h-[1px] bg-main-white w-full" />
+                                    className="absolute left-0 top-full mt-1 h-[1px] bg-main-white w-full" />
                             )}
                             {link.title}
                         </Link>
@@ -62,11 +63,11 @@ export default function NavBar() {
             <ul className=' flex-row gap-8 mx-4 md:flex hidden items-center'>
                 {LinkRightSide.map((link) => (
                     <li className=' text-base' key={link.href}>
-                        <Link href={link.href} className="text-gray-400 relative hover:text-gray-200 duration-150">
+                        <Link href={link.href} className={`text-gray-400 relative hover:text-gray-200 duration-150  text-base ${link.href === path ? 'activeLink' : ''}`} >
                             {link.href === path && (
                                 <motion.span
                                     layoutId="underline"
-                                    className="absolute left-0 top-full h-[1px] bg-main-white w-full" />
+                                    className="absolute left-0 top-full mt-1 h-[1px] bg-main-white w-full" />
                             )}
                             {link.title}
                         </Link>

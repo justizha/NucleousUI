@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Faq() {
     return (
-        <section className=" lg:pt-20 lg:pb-20 pb-16 pt-16 z-10 bg-main-black">
+        <section className="border-b border-gray-700 lg:pt-20 lg:pb-20 pb-16 pt-16 z-10 bg-main-black">
             <div className="">
                 <h1 className="md:text-4xl text-[30px] font-bold text-start mb-10 md:mx-8 mx-2 text-white">
                     Frequently asked questions
