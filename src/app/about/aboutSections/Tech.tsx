@@ -4,7 +4,7 @@ export default function Tech() {
         <section className="pb-24 pt-24 mx-auto border-t border-main-gray border-b">
             <div>
                 <h1 className="font-semibold text-3xl text-center text-white">Technologies</h1>
-                <h4 className="text-center text-main-gray text-lg mt-4">Here are the Framework,Libraries and Language used in this website.</h4>
+                <h4 className="text-center text-main-gray md:text-lg text-sm mt-4 mx-4">Here are the Framework,Libraries and Language used in this website.</h4>
             </div>
             <div className="flex justify-center md:mx-10 mx-4 mt-10">
                 <div className="grid md:grid-cols-4 gap-4">
