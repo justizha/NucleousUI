@@ -27,6 +27,10 @@ const dataTech = [
         img: 'https://lucide.dev/logo.dark.svg',
         language: 'lucide icons',
     },
+    {
+        img: 'https://seeklogo.com/images/F/framer-motion-logo-DA1E33CAA1-seeklogo.com.png',
+        language: 'Framer Motion'
+    }
 ];
 
 export default dataTech;
