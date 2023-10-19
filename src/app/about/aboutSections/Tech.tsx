@@ -7,14 +7,13 @@ export default function Tech() {
                 <h4 className="text-center text-main-gray text-lg mt-4">Here are the Framework,Libraries and Language used in this website.</h4>
             </div>
             <div className="flex justify-center md:mx-10 mx-4 mt-10">
-                <div className="grid md:grid-cols-2 gap-10">
+                <div className="grid md:grid-cols-4 gap-4">
                     {dataTech.map((data, index) => (
-                        <div key={index} className="rounded  bg-gradient-to-l from-main-black via-[#101935] to-[#1F618D] w-full h-80 md:h-64 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
-                            <img src={data.img} alt={data.language} className="w-48 ml-2" />
-                            <div className="text-start mr-2">
-                                <h2 className="font-semibold text-lg">{data.language}</h2>
-                                <p className="text-sm">{data.description}</p>
+                        <div key={index} className="bg-gray-700 shadow w-72 h-44 flex flex-col rounded shadow-main-white p-2">
+                            <div className="h-32 flex items-center justify-center p-4">
+                                <img src={data.img} alt={data.language} className="w-16" />
                             </div>
+                            <h3 className="text-lg font-semibold text-center mb-10">{data.language}</h3>
                         </div>
                     ))}
                 </div>
