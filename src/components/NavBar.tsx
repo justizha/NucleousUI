@@ -30,7 +30,7 @@ export default function NavBar() {
     };
     const LinkLeftSide = [
         { href: "/design", title: "Design" },
-        { href: "/docs", title: "Docs" },
+        { href: "/documentation", title: "Docs" },
     ]
     const LinkRightSide = [
         { href: "/about", title: "About" },
