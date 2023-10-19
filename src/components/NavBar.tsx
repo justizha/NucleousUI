@@ -1,11 +1,9 @@
 "use client";
-
 import { Menu, Transition } from "@headlessui/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Fragment, useEffect, useRef, useState } from "react";
-import BtnMode from "./BtnMode";
 export default function NavBar() {
     const [toggle, setToggle] = useState(false);
     const menu = "menu.svg";
@@ -74,9 +72,7 @@ export default function NavBar() {
                         </Link>
                     </li>
                 ))}
-                <li className="text-base">
-                    <BtnMode></BtnMode>
-                </li>
+
             </ul>
             <div className="sm:hidden flex flex-1 justify-end items-center mx-4">
                 <Menu as='div'>
