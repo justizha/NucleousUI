@@ -115,7 +115,7 @@ export default function NavBar() {
                                     </Link>
                                 </li>
                                 <li className=' text-base'>
-                                    <Link href={'/blog'} className="text-gray-400 hover:text-gray-200 duration-150">
+                                    <Link href={'/blogs'} className="text-gray-400 hover:text-gray-200 duration-150">
                                         Blogs
                                     </Link>
                                 </li>
