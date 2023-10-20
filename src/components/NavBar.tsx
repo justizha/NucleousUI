@@ -110,17 +110,17 @@ export default function NavBar() {
                                     </Link>
                                 </li>
                                 <li className=' text-base'>
-                                    <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150">
+                                    <Link href={'/contacts'} className="text-gray-400 hover:text-gray-200 duration-150">
                                         Contact
                                     </Link>
                                 </li>
                                 <li className=' text-base'>
-                                    <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150">
+                                    <Link href={'/blog'} className="text-gray-400 hover:text-gray-200 duration-150">
                                         Blogs
                                     </Link>
                                 </li>
                                 <li className=' text-base'>
-                                    <Link href={'/underdev'} className="text-gray-400 hover:text-gray-200 duration-150  text-base">
+                                    <Link href={'/design'} className="text-gray-400 hover:text-gray-200 duration-150  text-base">
                                         Design
                                     </Link>
                                 </li>
