@@ -34,7 +34,7 @@ export default function NavBar() {
     ]
     const LinkRightSide = [
         { href: "/about", title: "About" },
-        { href: "/blog", title: "Blogs" },
+        { href: "/blogs", title: "Blogs" },
         { href: "/contact", title: "Contact" }
     ]
     const path = usePathname()

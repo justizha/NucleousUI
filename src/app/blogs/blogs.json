@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "title": "The Reason Behind Development Next Design",
+        "description": "The Reason why I make this site is...",
+        "release_date": "20-Oct-2023",
+        "author": "Izha"
+    },
+    {
+        "id": 2,
+        "title": "About updates",
+        "description": "Because this is still in pre lease state i will make sure i keep everything updated quickly this site need more functionality , i'll keep doing some analysis and make more improvement,performance and so on i will keep posting some updates !",
+        "link": "",
+        "release_date": "20-Oct-2023",
+        "author": "Izha"
+    }
+]
