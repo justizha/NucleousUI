@@ -7,7 +7,7 @@ export default function About() {
                 <div className="flex mt-14 flex-col md:mx-8">
                     <h1 className="text-3xl font-semibold text-white">About</h1>
                     <p className=" md:text-base text-start  text-sm font-normal text-main-gray mt-8 md:w-[48%]">
-                        Check out why this website exists and what cool tech stuff it's packing! It's like a digital toolbox that's all about making the web-building process easy and customizable. With a bunch of super cool tools and tricks up its sleeve, this site helps you create awesome and dynamic web content without any hassle
+                        Check out why this website exists and what cool tech stuff it's packing! It's like a digital toolbox that's all about making the web-building process easy and customizable. With a bunch of super cool tools and tricks its sleeve, this site helps you create awesome and dynamic web content without any hassle
                     </p>
                 </div>
                 <div className="flex justify-end md:mt-10 mt-20 md:mr-14 mr-16">
