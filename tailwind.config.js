@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'font-arch': 'Archivo, sans-serif'
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -17,10 +20,8 @@ module.exports = {
         'main-black' : ' #1E1E1E',
         'main-white' : '#FFF5EE',
         'main-gray' : '#A9A9A9',
-        'main-orange' : '#ff5722',
+        'main-accent' : "076ECF",
         'main-blue' : "#03a8f4",
-        'main-green' : '#8bc34a',
-        'main-amber' : '#FFC107'
       },
       boxShadow : {
         project: " 15px 15px #565c63"
