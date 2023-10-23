@@ -24,7 +24,8 @@ module.exports = {
         'main-blue' : "#03a8f4",
       },
       boxShadow : {
-        project: " 15px 15px #565c63"
+        card: "5px 5px 5px 2px #a9a9a9",
+        effect : "0 4px 6px  0 1px 1px  0 2px 3px "
       }
     },
   },

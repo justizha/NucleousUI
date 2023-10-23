@@ -40,7 +40,7 @@ export default function NavBar() {
     const path = usePathname()
 
     return (
-        <nav className='w-full h-16 border-b flex justify-between border-gray-700 fixed z-50 bg-main-black ' ref={navRef}>
+        <nav className='w-full h-16 border-b flex justify-between border-main-gray fixed z-50 bg-main-black ' ref={navRef}>
             <ul className="flex items-center gap-8">
                 <li>
                     <Link href={'/'} className='font-black text-[32px] ml-3 cursor-pointer text-white'>
@@ -91,36 +91,31 @@ export default function NavBar() {
 
                     <Transition
                         as={Fragment}
-                        enter='transition ease-out duration-400'
-                        enterFrom='transform opacity-0 -translate-x-full'
-                        enterTo='transform opacity-100 -translate-x-0'
+                        enter='transition ease-in-out duration-500'
+                        enterFrom='transform opacity-0 -translate-y-full'
+                        enterTo='transform opacity-100 -translate-y-0'
                         leave='transition ease-in duration-300'
                         leaveFrom='transform opacity-100 -translate-x-0 '
-                        leaveTo='transform opacity-0 -translate-x-full'>
-                        <Menu.Items className='absolute left-0 top-16  border-gray-600  w-[60%] h-screen origin-top-right  bg-main-black z-50 border-r py-4'>
-                            <ul className="list-none mx-2 text-start grid mt-14 gap-4">
-                                <li className="text-lg">
-                                    <Link href={'/'} className="font-semibold text-white">
-                                        NexT
-                                    </Link>
-                                </li>
-                                <li className=' text-base'>
-                                    <Link href={'/about'} className="text-gray-400 hover:text-gray-200 duration-150">
+                        leaveTo='transform opacity-0 -translate-y-full'>
+                        <Menu.Items className='absolute left-0 top-16 border-gray-600  w-screen h-screen origin-top-right  bg-main-black z-50 border-r py-4'>
+                            <ul className="list-none mx-4 text-start grid mt-14 gap-2">
+                                <li className='text-base text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-4'>
+                                    <Link href={'/about'} >
                                         About
                                     </Link>
                                 </li>
-                                <li className=' text-base'>
-                                    <Link href={'/contacts'} className="text-gray-400 hover:text-gray-200 duration-150">
+                                <li className='text-base text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-4'>
+                                    <Link href={'/contacts'} >
                                         Contact
                                     </Link>
                                 </li>
-                                <li className=' text-base'>
-                                    <Link href={'/blogs'} className="text-gray-400 hover:text-gray-200 duration-150">
+                                <li className='text-base text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-4'>
+                                    <Link href={'/blogs'} >
                                         Blogs
                                     </Link>
                                 </li>
-                                <li className=' text-base'>
-                                    <Link href={'/design'} className="text-gray-400 hover:text-gray-200 duration-150  text-base">
+                                <li className='text-base text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-4'>
+                                    <Link href={'/design'} >
                                         Design
                                     </Link>
                                 </li>

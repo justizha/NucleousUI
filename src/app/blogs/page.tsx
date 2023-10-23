@@ -24,7 +24,7 @@ export default function blog() {
                         .sort((a, b) => b.id - a.id)
                         .map((blog) => (
                             <div className="w-full px-4" key={blog.id}>
-                                <div className="mx-auto w-full max-w-2x rounded border border-main-gray bg-stone-800 p-2">
+                                <div className="mx-auto w-full max-w-2x rounded shadow-main-gray shadow-card border border-stone-600 bg-main-black bg-opacity-40 p-2">
                                     <Disclosure>
                                         {({ open }) => (
                                             <>
