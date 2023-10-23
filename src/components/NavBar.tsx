@@ -3,31 +3,15 @@ import { Menu, Transition } from "@headlessui/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Fragment, useEffect, useRef, useState } from "react";
+import { Fragment, useState } from "react";
 export default function NavBar() {
     const [toggle, setToggle] = useState(false);
+    const handleLinkClick = () => {
+        setToggle(false);
+    };
     const menu = "menu.svg";
     const close = "close.svg";
-    const navRef = useRef(null);
-    const isMobile = () => {
-        const width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        return width < 640;
-    };
-    useEffect(() => {
-        if (toggle && isMobile()) {
-            document.addEventListener('mousedown', handleClickOutside);
-        } else {
-            document.removeEventListener('mousedown', handleClickOutside);
-        }
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, [toggle]);
-    const handleClickOutside = (event: any) => {
-        if (navRef.current && !navRef.current.contains(event.target)) {
-            setToggle(false);
-        }
-    };
+
     const LinkLeftSide = [
         { href: "/design", title: "Design" },
         { href: "/documentation", title: "Docs" },
@@ -40,7 +24,7 @@ export default function NavBar() {
     const path = usePathname()
 
     return (
-        <nav className='w-full h-16 border-b flex justify-between border-main-gray fixed z-50 bg-main-black ' ref={navRef}>
+        <nav className='w-full h-16 border-b flex justify-between border-main-gray fixed z-50 bg-main-black '>
             <ul className="flex items-center gap-8">
                 <li>
                     <Link href={'/'} className='font-black text-[32px] ml-3 cursor-pointer text-white'>
@@ -100,22 +84,22 @@ export default function NavBar() {
                         <Menu.Items className='absolute left-0 top-16 border-gray-600  w-screen h-screen origin-top-right  bg-main-black z-50 border-r py-4'>
                             <ul className="list-none mx-4 text-start grid mt-14 gap-2">
                                 <li className='text-base text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-4'>
-                                    <Link href={'/about'} >
+                                    <Link href={'/about'} onClick={handleLinkClick}>
                                         About
                                     </Link>
                                 </li>
                                 <li className='text-base text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-4'>
-                                    <Link href={'/contacts'} >
+                                    <Link href={'/contacts'} onClick={handleLinkClick}>
                                         Contact
                                     </Link>
                                 </li>
                                 <li className='text-base text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-4'>
-                                    <Link href={'/blogs'} >
+                                    <Link href={'/blogs'} onClick={handleLinkClick}>
                                         Blogs
                                     </Link>
                                 </li>
                                 <li className='text-base text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-4'>
-                                    <Link href={'/design'} >
+                                    <Link href={'/design'} onClick={handleLinkClick}>
                                         Design
                                     </Link>
                                 </li>
