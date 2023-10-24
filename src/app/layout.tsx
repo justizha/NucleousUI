@@ -7,13 +7,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className='bg-bg-main-black'>
       <body className='bg-main-black'>
         <main className=''>
           <NavBar></NavBar>
           {children}
         </main>
-        <footer className='w-full  pt-3 bg-main-black pb-4 md:pb-10'>
+        <hr className='bg-main-gray' />
+        <footer className='w-full pt-3 pb-4 md:pb-10 bg-main-black'>
           <div className='md:flex md:justify-center md:gap-24 grid grid-cols-2 mx-auto'>
             {/* first footer */}
             <div className='px-4 mt-4 mb-2'>

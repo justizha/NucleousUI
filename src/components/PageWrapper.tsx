@@ -9,7 +9,7 @@ export default function PageWrapper({ children }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 0 }}
             transition={{ delay: 0.15 }}
-            className="min-h-screen bg-main-black border-b border-main-gray"
+            className="min-h-screen bg-main-black"
         >
             {children}
         </motion.div>

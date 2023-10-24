@@ -20,8 +20,8 @@ module.exports = {
         'main-black' : ' #1E1E1E',
         'main-white' : '#FFF5EE',
         'main-gray' : '#A9A9A9',
-        'main-accent' : "076ECF",
-        'main-blue' : "#03a8f4",
+        'main-accent' : "#076ECF",
+        'main-blue' : "#304BBA",
       },
       boxShadow : {
         card: "5px 5px 5px 2px #a9a9a9",

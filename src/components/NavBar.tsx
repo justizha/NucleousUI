@@ -7,10 +7,8 @@ import { usePathname } from "next/navigation";
 import { Fragment, useState } from "react";
 export default function NavBar() {
     const [toggle, setToggle] = useState(false);
-
     const menu = "menu.svg";
     const close = "close.svg";
-
     const LinkLeftSide = [
         { href: "/design", title: "Design" },
         { href: "/documentation", title: "Docs" },
@@ -63,10 +61,9 @@ export default function NavBar() {
                     <div className="grid place-items-center ">
                         <Menu.Button className='flex items-center justify-center h-10 w-10'>
                             <img
-                                src={toggle ? close : menu}
+                                src={menu}
                                 alt="menu"
-                                className={`w-[35px] cursor-pointer transition-opacity duration 700 p-2  mt-3 bg-gray-500 bg-opacity-50 dark: bg-transparent ${toggle ? 'opacity-100' : 'opacity-70'
-                                    } `}
+                                className='rounded bg-opacity-60 bg-main-gray w-[35px] cursor-pointer transition-opacity duration 700 p-2  mt-3 '
 
                             />
                         </Menu.Button>
@@ -80,25 +77,25 @@ export default function NavBar() {
                         leave='transition ease-in duration-300'
                         leaveFrom='transform opacity-100 -translate-x-0 '
                         leaveTo='transform opacity-0 -translate-y-full'>
-                        <Menu.Items className='absolute left-0 top-16  w-screen overflow-y-auto h-40 origin-top-right  bg-main-black z-50 border-r py-4 border-b border-main-gray'>
-                            <ul className="list-none mx-4 text-start grid mt-1 gap-2">
-                                <Link href={'/about'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-4'
+                        <Menu.Items className='absolute left-0 top-16  w-screen overflow-y-auto h-44 origin-top-right  bg-main-black z-50 border-r py-4 border-b border-main-gray'>
+                            <ul className="list-none mx-4 text-start flex justify-center flex-col mt-1 gap-2">
+                                <Link href={'/about'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2'
                                 >
                                     <HelpCircle />    About
                                 </Link>
-                                <Link href={'/about'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-4'
+                                <Link href={'/about'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2'
                                 >
                                     <Mail />    Contact
                                 </Link>
-                                <Link href={'/about'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-4'
+                                <Link href={'/about'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2'
                                 >
                                     <Newspaper />    Blogs
                                 </Link>
-                                <Link href={'/about'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-4'
+                                <Link href={'/about'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2'
                                 >
                                     <Palette />    Design
                                 </Link>
-                                <Link href={'/about'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-4'
+                                <Link href={'/about'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2'
                                 >
                                     <FileText />    Documentation
                                 </Link>
