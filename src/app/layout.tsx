@@ -21,7 +21,6 @@ export default function RootLayout({ children }) {
         <hr className='bg-main-gray' />
         <Footer></Footer>
       </body>
-
     </html>
   )
 }

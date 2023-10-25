@@ -7,13 +7,13 @@ import blogs from './blogs.json';
 export default function blog() {
     return (
         <PageWrapper>
-            <section className="pb-24 pt-24 mx-10 ">
-                <div>
-                    <h1 className="text-white font-semibold text-3xl ">
-                        The NexT Blog.
+            <section className="pb-20 pt-24 mx-10 ">
+                <div className="mt-8 mx-4">
+                    <h1 className="text-white font-semibold text-5xl">
+                        The <span className="italic text-main-blue">NexT</span> Blog.
                     </h1>
-                    <p>
-                        The NexT Blog Read all the latest updates
+                    <p className="text-base ml-2 mt-2">
+                        The Next Blog.Read all the latest updates
                         <br /> and the current situation about the site.
                     </p>
                 </div>
@@ -24,7 +24,7 @@ export default function blog() {
                         .sort((a, b) => b.id - a.id)
                         .map((blog) => (
                             <div className="w-full px-4" key={blog.id}>
-                                <div className="mx-auto w-full max-w-2x rounded shadow-main-gray shadow-card border border-stone-600 bg-main-black bg-opacity-40 p-2">
+                                <div className="mx-auto w-full max-w-2x rounded shadow shadow-black  border border-main-gray bg-[#272727]  p-2">
                                     <Disclosure>
                                         {({ open }) => (
                                             <>

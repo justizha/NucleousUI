@@ -29,7 +29,7 @@ export default function About() {
                 <div className="flex justify-center md:mx-10 mt-10">
                     <div className="grid md:grid-cols-4 md:gap-8 gap-5">
                         {dataTech.map((data, index) => (
-                            <div key={index} className="bg-[#43464B] hover:shadow-md duration-200 hover:scale-105 w-[300px] h-44 flex flex-col rounded hover:shadow-main-white p-2">
+                            <div key={index} className="bg-main-gray bg-opacity-30 duration-200 hover:scale-95 w-[300px] h-44 flex flex-col rounded  p-2">
                                 <div className="h-32 flex items-center justify-center p-4">
                                     <img src={data.img} alt={data.language} className="w-16" />
                                 </div>

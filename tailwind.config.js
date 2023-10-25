@@ -21,10 +21,10 @@ module.exports = {
         'main-white' : '#FFF5EE',
         'main-gray' : '#A9A9A9',
         'main-accent' : "#0e118e",
-        'main-blue' : "#1d40d2",
+        'main-blue' : "#2B4695",
       },
       boxShadow : {
-        card: "5px 5px 5px 2px #a9a9a9",
+        card: "#a9a9a9",
         effect : "0 4px 6px  0 1px 1px  0 2px 3px "
       }
     },

@@ -1,7 +1,7 @@
 "use client";
 import { Menu, Transition } from "@headlessui/react";
 import { motion } from "framer-motion";
-import { FileText, HelpCircle, Mail, Newspaper, Palette } from "lucide-react";
+import { FileText, HelpCircle, LayoutGrid, Mail, Newspaper, Palette } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Fragment, useState } from "react";
@@ -24,8 +24,8 @@ export default function NavBar() {
         <nav className='w-full h-16 border-b flex justify-between border-main-gray fixed z-50 bg-main-black '>
             <ul className="flex items-center gap-8">
                 <li>
-                    <Link href={'/'} className='font-black text-[32px] ml-3 cursor-pointer text-white'>
-                        NexT
+                    <Link href={'/'} className='font-black text-[32px] ml-3 flex gap-1 items-center cursor-pointer text-white'>
+                        <LayoutGrid className="text-main-blue" />    NexT
                     </Link>
                 </li>
                 {LinkLeftSide.map((link) => (
