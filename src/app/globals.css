@@ -37,6 +37,7 @@ body {
 
 ::-webkit-scrollbar-track {
   background: #1e1e1e;
+  border: 1px solid #4e4e4e;
 }
 
 ::-webkit-scrollbar-thumb {

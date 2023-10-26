@@ -9,8 +9,8 @@ export default function Home() {
     <PageWrapper>
       <section className="bg-main-black">
         <Hero />
-        <Faq />
         <CodeHighlight />
+        <Faq />
       </section>
     </PageWrapper>
   )

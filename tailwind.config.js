@@ -20,7 +20,7 @@ module.exports = {
         'main-black' : ' #1E1E1E',
         'main-white' : '#FFF5EE',
         'main-gray' : '#A9A9A9',
-        'main-accent' : "11A8E8",
+        'main-accent' : "#11A8E8",
         'main-blue' : "#11A5E4",
       },
       boxShadow : {
