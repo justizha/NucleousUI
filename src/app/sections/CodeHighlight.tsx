@@ -47,7 +47,7 @@ export default function CodeHighlight() {
                         {codeString}
                     </SyntaxHighlighter>
                 </div>
-                <div className='w-1/2 bg-main-white p-5 rounded'>
+                <div className='md:w-1/2 bg-main-white p-5 rounded'>
                     <h1 className='md:text-5xl text-3xl font-bold text-black mb-3'>
                         Echoes of
                         the Silenced Wind
