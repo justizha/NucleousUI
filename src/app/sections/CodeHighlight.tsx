@@ -4,7 +4,7 @@ import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export default function CodeHighlight() {
     const codeString = `
-    <section class='w-full mx-auto'>
+    <div class='w-1/2 mx-auto'>
         <h1 class='text-5xl font-bold text-main-white'>
             Echoes of <br />
             the Silenced Wind
@@ -16,7 +16,7 @@ export default function CodeHighlight() {
                 Get Started.
             </button>
         </div>
-    </section>
+    </div>
     `
     const [setText] = useState('')
     const copyCode = (text: string) => {
@@ -29,7 +29,10 @@ export default function CodeHighlight() {
     }
     return (
         <section className='bg-main-black mx-8 pb-10 pt-20'>
-            <h1 className='text-center mb-10 text-4xl font-semibold tracking-tight'>Easy To Use !</h1>
+            <div className='text-main-white mb-10'>
+                <h1 className='text-center mb-2 text-4xl font-semibold tracking-tight'>Easy To Use !</h1>
+                <p className=' text-center text-lg'>Just copy and Paste !</p>
+            </div>
             <div className='flex justify-between md:flex-row flex-col gap-5'>
                 <div className='w-full md:w-[60%]'>
                     <div className='flex justify-between px-4 rounded-t bg-gray-600 text-white text text-base'>
@@ -42,7 +45,7 @@ export default function CodeHighlight() {
                         language='htmlbars'
                         style={atomOneDark}
                         wrapLongLines={true}
-                        className="overflow-y-auto max-h-52"
+                        className="overflow-y-auto max-h-64"
                     >
                         {codeString}
                     </SyntaxHighlighter>
@@ -61,6 +64,7 @@ export default function CodeHighlight() {
                         </button>
                     </div>
                 </div>
+
             </div>
         </section >
     )
