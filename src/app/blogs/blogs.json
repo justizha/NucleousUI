@@ -13,5 +13,13 @@
         "link": "",
         "release_date": "20-Oct-2023",
         "author": "Izha"
+    },
+    {
+        "id": 3,
+        "title": "Release Notes v0.0.1.4",
+        "description": "Quite huge update this time performance optimization thanks to Next.js 14 updated section and much more ! you can visit link bellow !",
+        "link": "https://github.com/justizha/NextDesignComponent/releases/tag/nextjs14",
+        "release_date": "20-Oct-2023",
+        "author": "Izha"
     }
 ]

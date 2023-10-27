@@ -12,7 +12,7 @@ export default function blog() {
                     <h1 className="text-white font-semibold text-5xl">
                         The <span className="italic text-main-blue">NexT</span> Blog.
                     </h1>
-                    <p className="text-base ml-2 mt-2">
+                    <p className="text-base ml-2 mt-2 text-main-white">
                         The Next Blog.Read all the latest updates
                         <br /> and the current situation about the site.
                     </p>
@@ -36,11 +36,12 @@ export default function blog() {
                                                             } h-5 w-5 text-main-blue`}
                                                     />
                                                 </Disclosure.Button>
-                                                <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm flex flex-col">
+                                                <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm flex flex-col text-main-white">
                                                     {blog.description}
                                                     <div className="flex mt-2 justify-end gap-2">
-                                                        <span>{blog.author}</span>
-                                                        <span>{blog.release_date}</span>
+                                                        <a href={blog.link} className="underline text-blue-500 cursor-pointer">Release Notes for v 0.0.1.4</a>
+                                                        <span className="text-main-white">{blog.author}</span>
+                                                        <span className="text-main-white">{blog.release_date}</span>
                                                     </div>
                                                 </Disclosure.Panel>
                                             </>
