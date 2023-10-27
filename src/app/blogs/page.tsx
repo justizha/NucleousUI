@@ -19,7 +19,7 @@ export default function blog() {
                 </div>
             </section>
             <section className="mt-1 mx-4">
-                <div className="grid md:grid-cols-2 gap-3 grid-cols-1">
+                <div className="grid md:grid-cols-3 gap-3 grid-cols-1">
                     {blogs
                         .sort((a, b) => b.id - a.id)
                         .map((blog) => (
