@@ -2,19 +2,31 @@ import Button from "../../components/Button";
 
 export default function Hero() {
     return (
-        <section className="px-4 lg:pt-20 lg:pb-10 pt-32 pb-48 md:flex md:justify-between md:mx-20">
-            <div className="px-4 lg:px-4 z-10 py-4 md:w-1/2 flex flex-col">
-                <h1 className="font-black lg:text-7xl md:text-4xl text-[44px] tracking-tight lg:mb-7 mb-8 text-white">
+        <section
+            className="px-4 lg:pt-20 lg:pb-10 pt-32 pb-48 md:flex md:justify-between md:mx-20"
+        >
+            <div
+                className="px-4 lg:px-4 z-10 py-4 md:w-1/2 flex flex-col"
+            >
+                <h1
+                    className="font-black lg:text-7xl md:text-4xl text-[44px] tracking-tight lg:mb-7 mb-8 text-white"
+                >
                     NexT Component
                 </h1>
-                <p className="text-md md:text-base text-start lg:text-lg text-sm font-normal text-main-gray mt-8">
+                <p
+                    className="text-md md:text-base text-start lg:text-lg text-sm font-normal text-main-gray mt-8"
+                >
                     Speed up your website development with ready-to-use components, which are not only customizable but also completely free, making the whole process faster and more convenient.
                 </p>
-                <div className="justify-start flex mt-14 gap-10">
+                <div
+                    className="justify-start flex mt-14 gap-10"
+                >
                     <Button>Components</Button>
                 </div>
             </div>
-            <div className="md:w-1/2 w-full h-72 relative mt-8 duration-400 ml-2">
+            <div
+                className="md:w-1/2 w-full h-72 relative mt-8 duration-400 ml-2"
+            >
                 <div className="absolute top-10 right-14 bg-main-blue  w-40 h-40 rounded"></div>
                 <div className="absolute right-4 bg-[#272727]  w-9 h-[246.9px] rounded"></div>
                 <div className="absolute right-4 top-64 bg-main-gray bg-opacity-40 w-9 h-28 rounded"></div>
