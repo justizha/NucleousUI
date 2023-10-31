@@ -3,7 +3,7 @@ import Button from "../../components/Button";
 export default function Hero() {
     return (
         <section
-            className="px-4 lg:pt-20 lg:pb-10 pt-32 pb-48 md:flex md:justify-between md:mx-20"
+            className="px-4 lg:pt-20 lg:pb-10 pt-32 pb-48 md:flex md:justify-between md:mx-20 body"
         >
             <div
                 className="px-4 lg:px-4 z-10 py-4 md:w-1/2 flex flex-col"

@@ -1,18 +1,18 @@
-import { Archivo } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
 import './globals.css';
 export const metadata = {
   title: 'NextComponent',
 }
-const archivo = Archivo({
+const roboto = Roboto({
   weight: "400",
   subsets: ['latin'],
   display: 'swap'
 })
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={archivo.className}>
+    <html lang="en" className={roboto.className}>
       <body className='bg-main-black '>
         <main className=''>
           <NavBar></NavBar>
