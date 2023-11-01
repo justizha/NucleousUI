@@ -49,7 +49,7 @@ export default function Contact() {
     };
 
     return (
-        <section className="pb-10 pt-10 flex mx-4 md:flex-row flex-col">
+        <section className="pb-16 pt-24 flex mx-4 md:flex-row flex-col" id='contact'>
             <div className="h-full w-full mx-2 mb-3">
                 <h2 className="mb-10 text-3xl font-bold text-main-white">
                     Get In Touch !

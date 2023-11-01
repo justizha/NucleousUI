@@ -12,7 +12,7 @@ const roboto = Roboto({
 })
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={roboto.className}>
+    <html lang="en" className={`scroll-smooth ${roboto.className}`}>
       <body className='bg-main-black '>
         <main className=''>
           <NavBar></NavBar>

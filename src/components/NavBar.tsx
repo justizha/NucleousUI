@@ -16,7 +16,7 @@ export default function NavBar() {
     const LinkRightSide = [
         { href: "/about", title: "About" },
         { href: "/blogs", title: "Blogs" },
-        { href: "/contact", title: "Contact" }
+        { href: "/#contact", title: "Contact" }
     ]
     const path = usePathname()
 
@@ -90,11 +90,11 @@ export default function NavBar() {
                                 >
                                     <HelpCircle />    About
                                 </Link>
-                                <Link href={'/about'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2'
+                                <Link href={'/#contact'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2'
                                 >
                                     <Mail />    Contact
                                 </Link>
-                                <Link href={'/about'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2'
+                                <Link href={'/#'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2'
                                 >
                                     <Newspaper />    Blogs
                                 </Link>
@@ -102,7 +102,7 @@ export default function NavBar() {
                                 >
                                     <Palette />    Design
                                 </Link>
-                                <Link href={'/about'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2'
+                                <Link href={'/#'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-[#272727] hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2'
                                 >
                                     <FileText />    Documentation
                                 </Link>
