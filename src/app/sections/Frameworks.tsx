@@ -13,7 +13,7 @@ export default function Frameworks() {
             >
                 {Framework.map((Framework) => (
                     <div key={Framework.id} className="">
-                        <img src={Framework.img} className="h-20 object-contain mx-7" alt={Framework.name} />
+                        <img src={Framework.img} loading="lazy" className="h-20 object-contain mx-7" alt={Framework.name} />
                     </div>
                 ))}
             </Marquee>
