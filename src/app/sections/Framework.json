@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/800px-HTML5_Badge.svg.png",
+        "name": "html"
+    },
+    {
+        "id": 2,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png",
+        "name": "php"
+    },
+    {
+        "id": 3,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/640px-JavaScript-logo.png",
+        "name": "JavaScript"
+    },
+    {
+        "id": 4,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png?20221110153201",
+        "name": "TypeScript"
+    },
+    {
+        "id": 5,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1969px-Laravel.svg.png",
+        "name": "Laravel"
+    },
+    {
+        "id": 6,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1150px-React-icon.svg.png",
+        "name": "React"
+    },
+    {
+        "id": 7,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png",
+        "name": "vue.js"
+    },
+    {
+        "id": 8,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Svelte_Logo.svg/1200px-Svelte_Logo.svg.png",
+        "name": "svelte"
+    },
+    {
+        "id": 9,
+        "img": "https://cp.drunomics.com/files/styles/bounding_box_1600x1000/public/2022-12/icon-green-square.png?itok=OeJgmnSA",
+        "name": "nuxt.js"
+    },
+    {
+        "id": 10,
+        "img": "https://i.imgur.com/rCPOYsn.png",
+        "name": "next.js"
+    }
+]

@@ -12,7 +12,7 @@ export default function Faq() {
             </div>
             <div className="pt-5 grid gap-4 md:grid-cols-2 mx-4">
                 {faq.map((faq) => (
-                    <div className="bg-[#272727] p-2 rounded" key={faq.id}>
+                    <div className="bg-[#101128] p-2 rounded" key={faq.id}>
                         <h2 className="text-base font-semibold flex  mb-2 gap-1 text-main-white">
                             <HelpCircle className="w-4" />
                             {faq.question}

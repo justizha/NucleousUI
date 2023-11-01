@@ -3,6 +3,7 @@ import PageWrapper from "../components/PageWrapper"
 import CodeHighlight from "./sections/CodeHighlight"
 import Contact from "./sections/Contact"
 import Faq from "./sections/Faq"
+import Frameworks from "./sections/Frameworks"
 import Hero from "./sections/Hero"
 import PoweredBy from "./sections/PoweredBy"
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <section className="bg-main-black">
         <Hero />
         <PoweredBy />
+        <Frameworks />
         <CodeHighlight />
         <Faq />
         <Contact />

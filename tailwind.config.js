@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'font-arch': 'Archivo, sans-serif'
+        'arch': 'Archivo, sans-serif'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -17,11 +17,11 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors : {
-        'main-black' : '#1a1a1a',
+        'main-black' : '#0E0F1B',
         'main-white' : '#FFF5EE',
         'main-gray' : '#A9A9A9',
-        'main-accent' : "#11A8E8",
-        'main-blue' : "#11A5E4",
+        'main-accent' : "#241F75",
+        'main-blue' : "#190e5d",
       },
       boxShadow : {
         card: "#a9a9a9",

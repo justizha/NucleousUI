@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export default function CodeHighlight() {
     const codeString = `
@@ -43,7 +43,7 @@ export default function CodeHighlight() {
                     </div>
                     <SyntaxHighlighter
                         language='htmlbars'
-                        style={atomOneDark}
+                        style={nightOwl}
                         wrapLongLines={true}
                         className="overflow-y-auto max-h-64"
                     >

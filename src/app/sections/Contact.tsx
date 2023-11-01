@@ -63,7 +63,7 @@ export default function Contact() {
                     autoComplete="off"
                     ref={formRef}
                     onSubmit={sendEmail}
-                    className="w-full p-6 bg-[#272727] rounded-lg shadow text-main-white"
+                    className="w-full p-6 bg-[#101128] rounded-lg shadow text-main-white"
                 >
                     <div className="flex md:flex-row flex-col items-start mb-5 justify-between">
                         <h3 className="text-base text-main-white mb-2">Name</h3>
