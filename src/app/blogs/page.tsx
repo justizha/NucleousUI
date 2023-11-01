@@ -39,7 +39,7 @@ export default function blog() {
                                                 <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm flex flex-col text-main-white">
                                                     {blog.description}
                                                     <div className="flex mt-2 justify-end gap-2">
-                                                        <a href={blog.link} className="underline text-blue-500 cursor-pointer">Release Notes for v 0.0.1.4</a>
+                                                        <a href={blog.link} className="underline text-blue-500 cursor-pointer">{blog.link_title}</a>
                                                         <span className="text-main-white">{blog.author}</span>
                                                         <span className="text-main-white">{blog.release_date}</span>
                                                     </div>

@@ -5,13 +5,11 @@ import Contact from "./sections/Contact"
 import Faq from "./sections/Faq"
 import Frameworks from "./sections/Frameworks"
 import Hero from "./sections/Hero"
-import PoweredBy from "./sections/PoweredBy"
 export default function Home() {
   return (
     <PageWrapper>
       <section className="bg-main-black">
         <Hero />
-        <PoweredBy />
         <Frameworks />
         <CodeHighlight />
         <Faq />
