@@ -48,5 +48,10 @@
         "id": 10,
         "img": "https://i.imgur.com/rCPOYsn.png",
         "name": "next.js"
+    },
+    {
+        "id": 11,
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Ruby_On_Rails_Logo.svg/2560px-Ruby_On_Rails_Logo.svg.png",
+        "name": "Ruby on Rails"
     }
 ]

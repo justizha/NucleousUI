@@ -18,10 +18,11 @@ export default function CodeHighlight() {
         </div>
     </div>
     `
-    const [setText] = useState('')
+    const [isCopied, setIsCopied] = useState(false)
     const copyCode = (text: string) => {
         navigator.clipboard.writeText(text).then(() => {
             console.log("copied")
+            setIsCopied(true)
         },
             (error) => {
                 console.log("error", error)
@@ -35,10 +36,10 @@ export default function CodeHighlight() {
             </div>
             <div className='flex justify-between md:flex-row flex-col gap-5'>
                 <div className='w-full md:w-[60%]'>
-                    <div className='flex justify-between px-4 rounded-t bg-gray-600 text-white text text-base'>
+                    <div className='flex justify-between p-2 rounded-t bg-gray-600 text-white text text-base'>
                         <p>Example Usage</p>
-                        <button onClick={() => copyCode(codeString)}>
-                            Copy
+                        <button onClick={() => copyCode(codeString)} className='p-1 duration-200 bg-main-gray rounded text-sm'>
+                            {isCopied ? 'Copied !' : 'Copy'}
                         </button>
                     </div>
                     <SyntaxHighlighter

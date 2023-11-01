@@ -4,7 +4,7 @@ import Framework from "./Framework.json";
 export default function Frameworks() {
     return (
         <section className="pt-20 pb-20">
-            <h1 className="font-semibold text-4xl text-center mb-10 text-main-white">
+            <h1 className="font-semibold text-4xl text-center mb-16 text-main-white">
                 Compatible with almost everything.
             </h1>
             <Marquee
