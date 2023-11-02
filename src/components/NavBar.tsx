@@ -72,15 +72,15 @@ export default function NavBar() {
                     <Transition
                         as={Fragment}
                         enter='transition ease-in-out duration-500'
-                        enterFrom='transform opacity-0 -translate-x-full'
+                        enterFrom='transform opacity-0 translate-x-full'
                         enterTo='transform opacity-100 -translate-y-0'
                         leave='transition ease-in duration-200'
-                        leaveFrom='transform opacity-100 -translate-x-0 '
-                        leaveTo='transform opacity-0 -translate-x-full'>
-                        <Menu.Items className='absolute left-0 top-0  w-1/2 overflow-y-auto h-screen origin-top-right  bg-main-black z-50 border-r py-4 border-main-gray'>
+                        leaveFrom='transform opacity-100 translate-x-0 '
+                        leaveTo='transform opacity-0 translate-x-full'>
+                        <Menu.Items className='absolute right-0 top-0  w-1/2 overflow-y-auto h-screen origin-top-right  bg-main-black z-50 border-l py-4 border-main-gray'>
                             <ul className="list-none mx-4 text-start flex justify-center flex-col mt-1 gap-2">
-                                <div className="flex justify-end">
-                                    <Menu.Button className='flex items-center justify-end h-10 w-10'>
+                                <div className="flex justify-start">
+                                    <Menu.Button className='flex justify-center items-center  bg-main-gray rounded p-1 h-10 w-10'>
                                         <img
                                             src={close}
                                             alt="close" />
