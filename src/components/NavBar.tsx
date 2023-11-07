@@ -21,7 +21,7 @@ export default function NavBar() {
     const path = usePathname()
 
     return (
-        <nav className='w-full h-16 border-b flex justify-between border-main-gray fixed z-50 bg-main-black backdrop-blur-none  '>
+        <header className='w-full h-16 border-b flex  justify-between border-main-gray fixed z-50 bg-main-black '>
             <ul className="flex items-center gap-8">
                 <li>
                     <Link href={'/'} className='font-black text-[32px] ml-3 flex gap-1 items-center cursor-pointer text-white'>
@@ -111,6 +111,6 @@ export default function NavBar() {
                     </Transition>
                 </Menu>
             </div>
-        </nav >
+        </header >
     )
 }

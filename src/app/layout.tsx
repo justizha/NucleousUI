@@ -14,12 +14,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`scroll-smooth ${dmSans.className}`}>
       <body className='bg-main-black '>
+        <NavBar />
         <main className=''>
-          <NavBar></NavBar>
           {children}
         </main>
         <hr className='bg-main-gray' />
-        <Footer></Footer>
+        <Footer />
       </body>
     </html>
   )
