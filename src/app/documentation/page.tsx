@@ -1,5 +1,10 @@
+import SideBar from "../../components/SideBar"
+
 export default function Docs() {
     return (
-        <div>Docs</div>
+        <>
+            <SideBar />
+            <section className="h-screen"></section>
+        </>
     )
 }

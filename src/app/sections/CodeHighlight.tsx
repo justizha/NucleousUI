@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export default function CodeHighlight() {
     const codeString = `
@@ -32,10 +32,10 @@ export default function CodeHighlight() {
         <section className='bg-main-black mx-8 pb-10 pt-20'>
             <div className='text-main-white mb-10'>
                 <h1 className='text-center mb-2 text-4xl font-semibold tracking-tight'>Easy To Use !</h1>
-                <p className=' text-center text-lg'>Just copy and Paste !</p>
+                <p className=' text-center text-lg'>Simply copy and paste the code snippets.</p>
             </div>
             <div className='flex justify-between md:flex-row flex-col gap-5'>
-                <div className='w-full md:w-[60%]'>
+                <div className='w-full md:w-[75%]'>
                     <div className='flex justify-between p-2 rounded-t bg-gray-600 text-white text text-base'>
                         <p>Example Usage</p>
                         <button onClick={() => copyCode(codeString)} className='p-1 duration-200 bg-main-gray rounded text-sm'>
@@ -44,7 +44,7 @@ export default function CodeHighlight() {
                     </div>
                     <SyntaxHighlighter
                         language='htmlbars'
-                        style={nightOwl}
+                        style={atomOneDark}
                         wrapLongLines={true}
                         className="overflow-y-auto max-h-64"
                     >

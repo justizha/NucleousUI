@@ -9,7 +9,7 @@ export default function Frameworks() {
             </h1>
             <Marquee
                 className=""
-                speed={65}
+                speed={30}
             >
                 {Framework.map((Framework) => (
                     <div key={Framework.id} className="">
