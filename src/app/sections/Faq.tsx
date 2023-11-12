@@ -4,6 +4,7 @@ import { HelpCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function data() {
+
     const [data, setData] = useState(null)
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/justizha/json-db/main/faq.json')
@@ -13,6 +14,7 @@ export default function data() {
                 console.log(data)
             })
     }, [])
+
     return (
         <section className="lg:pt-20 lg:pb-20 pb-16 pt-16 z-10 bg-main-black">
             <div className="">
