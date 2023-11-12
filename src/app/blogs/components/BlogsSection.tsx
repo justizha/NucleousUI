@@ -12,7 +12,7 @@ export default function BLogSection() {
             .then((res) => res.json())
             .then((data) => {
                 setData(data)
-                console.table(data)
+                // console.table(data)
             })
 
     });
