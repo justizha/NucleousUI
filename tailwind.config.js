@@ -26,7 +26,7 @@ module.exports = {
       boxShadow : {
         card: "#a9a9a9",
         effect : "0 4px 6px  0 1px 1px  0 2px 3px "
-      }
+      },
     },
   },
   plugins: [],

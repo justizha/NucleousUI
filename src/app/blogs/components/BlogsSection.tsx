@@ -4,21 +4,29 @@ import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from '@heroicons/react/20/solid';
 import { useEffect, useState } from "react";
 
+interface Blog {
+    id: number;
+    title: string;
+    description: string;
+    author: string;
+    release_date: string;
+    link: string;
+    link_title: string
 
+}
 export default function BLogSection() {
-    const [data, setData] = useState(null);
+    const [data, setData] = useState<Blog[]>([]);
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/justizha/json-db/main/blogs.json')
             .then((res) => res.json())
             .then((data) => {
                 setData(data)
-                // console.table(data)
             })
 
-    });
+    }, []);
     return (
         <div className="grid md:grid-cols-3 gap-3 grid-cols-1">
-            {data && data.sort((a: any, b: any) => b.id - a.id).map((blog: any) => (
+            {data && data.sort((a: any, b: any) => b.id - a.id).map((blog: Blog) => (
                 <div className="w-full px-4" key={blog.id}>
                     <div className="mx-auto w-full max-w-2x rounded shadow shadow-black  border border-main-gray bg-[#101128]  p-2">
                         <Disclosure>

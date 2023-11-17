@@ -34,3 +34,10 @@
 }
 
 
+@media (min-width: 400px) {
+    .xs\:flex {
+        display: flex;
+    }
+}
+
+

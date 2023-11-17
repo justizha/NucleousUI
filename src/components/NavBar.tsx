@@ -21,7 +21,7 @@ export default function NavBar() {
     const path = usePathname()
 
     return (
-        <header className='w-full h-16 border-b flex  justify-between border-main-gray fixed z-50 bg-main-black '>
+        <header className='w-full h-16 border-b flex justify-between border-main-gray fixed z-50 bg-main-black '>
             <ul className="flex items-center gap-8">
                 <li>
                     <Link href={'/'} className='font-black text-[32px] ml-3 flex gap-1 items-center cursor-pointer text-white'>
@@ -41,7 +41,7 @@ export default function NavBar() {
                     </li>
                 ))}
             </ul>
-            <ul className=' flex-row gap-8 mx-4 md:flex hidden items-center'>
+            <ul className='gap-8 mx-4 md:flex hidden items-center'>
                 {LinkRightSide.map((link) => (
                     <li className=' text-base' key={link.href}>
                         <Link href={link.href} className={`text-gray-400 relative hover:text-gray-200 duration-150  text-base ${link.href === path ? 'activeLink' : ''}`} >
@@ -56,7 +56,7 @@ export default function NavBar() {
                 ))}
 
             </ul>
-            <div className="sm:hidden flex flex-1 justify-end items-center mx-4">
+            <div className="md:hidden flex flex-1 justify-end items-center mx-4">
                 <Menu as='div'>
                     <div className="grid place-items-center ">
                         <Menu.Button className='flex items-center justify-center h-10 w-10'>
@@ -77,7 +77,7 @@ export default function NavBar() {
                         leave='transition ease-in duration-200'
                         leaveFrom='transform opacity-100 translate-x-0 '
                         leaveTo='transform opacity-0 translate-x-full'>
-                        <Menu.Items className='absolute right-0 top-0  w-1/2 overflow-y-auto h-screen origin-top-right  bg-main-black z-50 border-l py-4 border-main-gray'>
+                        <Menu.Items className='absolute right-0 top-0  w-[70%] overflow-y-auto h-screen origin-top-right  bg-main-black z-50 border-l py-4 border-main-gray'>
                             <ul className="list-none mx-4 text-start flex justify-center flex-col mt-1 gap-2">
                                 <div className="flex justify-start">
                                     <Menu.Button className='flex justify-center items-center  bg-main-gray rounded p-1 h-10 w-10'>
