@@ -4,14 +4,20 @@ import { HelpCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function data() {
-
+    const [error, setError] = useState(null)
     const [data, setData] = useState(null)
     useEffect(() => {
         fetch('https://raw.githubusercontent.com/justizha/json-db/main/faq.json')
-            .then((res) => res.json())
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error("Network Respond not Ok")
+                }
+                return res.json()
+            })
             .then((data) => {
                 setData(data)
-                // console.log(data)
+            }).catch((error) => {
+                console.error("something went wrong", error)
             })
     }, [])
 
