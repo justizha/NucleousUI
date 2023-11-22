@@ -1,25 +1,9 @@
 'use client';
 
 import { HelpCircle } from "lucide-react";
-import { useEffect, useState } from "react";
+import faq from './components/Faq.json';
 
 export default function data() {
-    const [error, setError] = useState(null)
-    const [data, setData] = useState(null)
-    useEffect(() => {
-        fetch('https://raw.githubusercontent.com/justizha/json-db/main/faq.json')
-            .then((res) => {
-                if (!res.ok) {
-                    throw new Error("Network Respond not Ok")
-                }
-                return res.json()
-            })
-            .then((data) => {
-                setData(data)
-            }).catch((error) => {
-                console.error("something went wrong", error)
-            })
-    }, [])
 
     return (
         <section className="lg:pt-20 lg:pb-20 pb-16 pt-16 z-10 bg-main-black">
@@ -29,14 +13,14 @@ export default function data() {
                 </h1>
             </div>
             <div className="pt-5 grid gap-4 md:grid-cols-2 mx-4">
-                {data && data.map((item: any) => (
-                    <div className="bg-[#101128] p-2 rounded" key={item.id}>
+                {faq.map((faq) => (
+                    <div className="bg-[#101128] p-2 rounded" key={faq.id}>
                         <h2 className="text-base font-semibold flex  mb-2 gap-1 text-main-white">
                             <HelpCircle className="w-4" />
-                            {item.question}
+                            {faq.question}
                         </h2>
                         <p className="text-sm text-start  text-main-gray">
-                            {item.answers}
+                            {faq.answers}
                         </p>
                     </div>
                 ))}

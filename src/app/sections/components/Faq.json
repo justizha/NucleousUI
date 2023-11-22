@@ -1,0 +1,33 @@
+[
+    {
+        "id": 1,
+        "question": "What is the primary purpose of your website?",
+        "answers": "To provide ready-to-use web components for Tailwind CSS users."
+    },
+    {
+        "id": 2,
+        "question": "What sets us apart?",
+        "answers": "Exclusive Tailwind CSS-focused components, no downloads required."
+    },
+    {
+        "id": 3,
+        "question": "Can users customize components?",
+        "answers": "Yes, for seamless project integration."
+    },
+    {
+        "id": 4,
+        "question": "How to access components?",
+        "answers": "Browse, copy code snippets, no downloads needed."
+    },
+    {
+        "id": 5,
+        "question": "Compatibility with other frameworks?",
+        "answers": "Yes, adaptable to various frameworks."
+    },
+    {
+        "id": 6,
+        "question": "Is documentation available?",
+        "answers": "Comprehensive guides and usage examples",
+        "link": "/documentation"
+    }
+]
