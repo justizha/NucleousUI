@@ -17,7 +17,7 @@ interface Blog {
 export default function BLogSection() {
     const [data, setData] = useState<Blog[]>([]);
     useEffect(() => {
-        fetch('https://raw.githubusercontent.com/justizha/json-db/main/blogs.json')
+        fetch('https://api.jsonsilo.com/public/196ccc69-d44d-4fc3-80d1-e234c61b05d8')
             .then((res) => {
                 if (!res.json) {
                     throw new Error("Respond status is not ok")
