@@ -1,4 +1,4 @@
-export default function ButtonsExample() {
+export default function Buttons() {
     return (
         <></>
     )

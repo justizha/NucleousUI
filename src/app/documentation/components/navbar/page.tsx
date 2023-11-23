@@ -1,4 +1,4 @@
-export function ExampleNavbar() {
+export function navbar() {
     return (
         <></>
     )
