@@ -2,11 +2,8 @@
 import { SendHorizonal } from "lucide-react";
 import { useEmail } from "../../hooks/useEmail";
 
-
-
 export default function Contact() {
     const [form, handleChange, handleSubmit] = useEmail();
-
     return (
         <section className="pb-16 pt-24 flex mx-4 md:flex-row flex-col" id='contact'>
             <div className="h-full w-full mx-2 mb-3">
