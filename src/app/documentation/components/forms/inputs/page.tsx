@@ -1,4 +1,4 @@
-export default function Inputs() {
+export default function inputs() {
     return (
         <></>
     )

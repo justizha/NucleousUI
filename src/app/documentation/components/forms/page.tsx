@@ -1,4 +1,4 @@
-export default function Register() {
+export default function register() {
     return (
         <></>
     )
