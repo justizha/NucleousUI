@@ -17,11 +17,11 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors : {
-        'main-black' : '#0E0F1B',
+        'main-black' : '#282c34',
         'main-white' : '#FFF5EE',
         'main-gray' : '#A9A9A9',
-        'main-accent' : "#241F75",
-        'main-blue' : "#190e5d",
+        'main-accent' : "#636d83",
+        'main-blue' : "#007BFF",
       },
       boxShadow : {
         card: "#a9a9a9",

@@ -1,18 +1,18 @@
 import { useState } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { vs2015 } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export default function CodeHighlight() {
     const codeString = `
     <div class='w-1/2 mx-auto'>
-        <h1 class='text-5xl font-bold text-main-white'>
+        <h1 class='text-5xl font-bold text-white'>
             Echoes of <br />
             the Silenced Wind
         </h1>
-        <p class='text-main-white text-sm'>
+        <p class='text-white text-sm'>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum repudiandae aspernatur, assumenda unde ab nemo 
         <div className='mt-3'>
-            <button class='p-1 bg-main-white rounded-md text-black'>
+            <button class='p-1 bg-gray-200 rounded-md text-black'>
                 Get Started.
             </button>
         </div>
@@ -44,7 +44,7 @@ export default function CodeHighlight() {
                     </div>
                     <SyntaxHighlighter
                         language='htmlbars'
-                        style={atomOneDark}
+                        style={vs2015}
                         wrapLongLines={true}
                         className="overflow-y-auto max-h-64"
                     >

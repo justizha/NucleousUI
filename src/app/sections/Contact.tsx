@@ -18,7 +18,7 @@ export default function Contact() {
                 <form
                     autoComplete="off"
                     onSubmit={handleSubmit}
-                    className="w-full p-6 bg-[#101128] rounded-lg shadow text-main-white"
+                    className="w-full p-6 bg-main-accent rounded-lg shadow-lg "
                 >
                     <div className="flex md:flex-row flex-col items-start mb-5 justify-between">
                         <h3 className="text-base text-main-white mb-2">Name</h3>
@@ -29,7 +29,7 @@ export default function Contact() {
                             id="text"
                             name="user_name"
                             type="text"
-                            className="md:w-[80%] w-full gap-2 p-2 bg-transparent border border-gray-200 rounded-md outline-none flex items-center"
+                            className="md:w-[80%] w-full gap-2 placeholder:text-gray-300 p-2 bg-transparent border shadow-lg border-gray-400 rounded-md outline-none flex items-center"
                             placeholder="Example name"
                         />
                     </div>
@@ -42,7 +42,7 @@ export default function Contact() {
                             id="email"
                             name="user_email"
                             type="email"
-                            className="md:w-[80%] w-full gap-2 p-2 bg-transparent border border-gray-200 rounded-md outline-none flex items-center"
+                            className="md:w-[80%] placeholder:text-gray-300 w-full gap-2 p-2 bg-transparent border shadow-lg border-gray-400 rounded-md outline-none flex items-center"
                             placeholder="Example@gmail.com"
                         />
                     </div>
@@ -53,7 +53,7 @@ export default function Contact() {
                             required
                             name="message"
                             value={form.message}
-                            className="md:w-[80%] w-full gap-2 p-2 bg-transparent border border-gray-200 rounded-md outline-none flex items-center"
+                            className="md:w-[80%] w-full gap-2 p-2 bg-transparent border shadow-lg border-gray-400 rounded-md outline-none flex placeholder:text-gray-300 items-center"
                             placeholder="Tell us more...." >
 
                         </textarea>
