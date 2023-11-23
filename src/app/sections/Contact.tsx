@@ -1,52 +1,11 @@
 "use client"
-import emailjs from "@emailjs/browser";
 import { SendHorizonal } from "lucide-react";
-import { ChangeEvent, useRef, useState } from "react";
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
+import { useEmail } from "../../hooks/useEmail";
+
+
 
 export default function Contact() {
-    const formRef = useRef()
-    const [form, setForm] = useState({
-        user_name: "",
-        user_email: "",
-        message: ""
-    });
-
-    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { target } = e;
-        const { name, value } = target;
-
-        setForm({
-            ...form,
-            [name]: value
-        })
-    }
-
-    const MySwal = withReactContent(Swal)
-    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        emailjs.sendForm('service_73yrfq8', 'template_reug0ro', formRef.current, 'bnH7-JlAP3FpDBq6t')
-            .then((result) => {
-                console.log(result);
-                MySwal.fire({
-                    title: <h2>Message Sent!</h2>,
-                    icon: 'success',
-                });
-                setForm({
-                    user_name: "",
-                    user_email: "",
-                    message: "",
-                });
-            })
-            .catch((error) => {
-                console.error('Error sending email: ', error);
-                MySwal.fire({
-                    title: <h2>Something Went Wrong :/</h2>,
-                    icon: "error"
-                });
-            });
-    };
+    const [form, handleChange, handleSubmit] = useEmail();
 
     return (
         <section className="pb-16 pt-24 flex mx-4 md:flex-row flex-col" id='contact'>
@@ -61,8 +20,7 @@ export default function Contact() {
             <div className="w-full">
                 <form
                     autoComplete="off"
-                    ref={formRef}
-                    onSubmit={sendEmail}
+                    onSubmit={handleSubmit}
                     className="w-full p-6 bg-[#101128] rounded-lg shadow text-main-white"
                 >
                     <div className="flex md:flex-row flex-col items-start mb-5 justify-between">
