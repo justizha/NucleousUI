@@ -31,7 +31,13 @@ export const useEmail = (): [FormState, HandleChange, HandleSubmit] => {
     const MySwal = withReactContent(Swal)
     const sendEmail = async () => {
         try {
-            const result = await emailjs.send('service_73yrfq8', 'template_reug0ro', form, 'bnH7-JlAP3FpDBq6t');
+            const result = await emailjs.send(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+                form,
+                process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+            );
+
             console.log(result);
             MySwal.fire({
                 title: `<h2>Message Sent!</h2>`,
