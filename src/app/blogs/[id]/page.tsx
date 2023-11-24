@@ -3,9 +3,12 @@
 import { useEffect, useState } from "react";
 
 async function getBlogDetail(id: number) {
-    const res = await fetch(`https://api.jsonsilo.com/public/196ccc69-d44d-4fc3-80d1-e234c61b05d8/`)
-    return res.json()
+    const res = await fetch('https://api.jsonsilo.com/public/196ccc69-d44d-4fc3-80d1-e234c61b05d8');
+    const allBlogs = await res.json();
+    const blog = allBlogs.find((blog: { id: number }) => blog.id === id);
+    return blog;
 }
+
 
 export default function Page({ params }: { params: { id: number } }) {
     const [blog, setBlog] = useState(null);

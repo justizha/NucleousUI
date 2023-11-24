@@ -2,7 +2,10 @@
 
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from '@heroicons/react/20/solid';
+import Link from "next/link";
 import { useEffect, useState } from "react";
+
+
 interface Blog {
     id: number;
     title: string;
@@ -52,7 +55,7 @@ export default function BLogSection() {
                                             <a href={blog.link} className="underline text-blue-500 cursor-pointer">{blog.link_title}</a>
                                             <span className="text-main-white">{blog.author}</span>
                                             <span className="text-main-white">{blog.release_date}</span>
-                                            {/* <Link href={`/blogs/${blog.id}`}>detail</Link> */}
+                                            <Link href={`/blogs/${blog.id}`}>detail</Link>
                                         </div>
                                     </Disclosure.Panel>
                                 </>

@@ -4,13 +4,14 @@
 /node_modules
 /.pnp
 .pnp.js
-
+/feature.md
 # testing
 /coverage
-
+/.env
 # next.js
 /.next/
 /out/
+/prisma
 
 # production
 /build
