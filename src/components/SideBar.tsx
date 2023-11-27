@@ -1,7 +1,7 @@
 export default function SideBar() {
     const links = [{}]
     return (
-        <aside className="mt-16 h-screen w-64 flex flex-col border-r transition-transform -translate-x-full sm:translate-x-0">
+        <aside className="fixed top-16 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0">
             <div className="h-full overflow-y-auto">
                 <h1 className="text-2xl font-black text-main-white mb-2 mt-2">Next</h1>
                 <ul>
