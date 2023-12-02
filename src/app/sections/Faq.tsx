@@ -1,7 +1,7 @@
 'use client';
 
 import { HelpCircle } from "lucide-react";
-import faq from './components/Faq.json';
+import faq from '../json/Faq.json';
 
 export default function data() {
 
