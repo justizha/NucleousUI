@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`scroll-smooth ${dmSans.className}`}>
       <body className='bg-main-black '>
         <NavBar />
-        <main>
+        <main className=''>
           {children}
         </main>
         <hr className='bg-main-gray' />
