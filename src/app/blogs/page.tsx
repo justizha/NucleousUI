@@ -1,19 +1,8 @@
 
 import prisma from "../lib/prisma"
 
-export async function getBLogs() {
-
+export default async function BLogSection() {
     const blogs = await prisma.blog.findMany()
-
-    return {
-        props: {
-            blogs
-        }
-    }
-}
-
-
-export default async function BLogSection({ blogs }) {
     return (
         <div className="grid md:grid-cols-3 gap-3 grid-cols-1">
             <div className="w-full px-4">
