@@ -1,20 +1,31 @@
 
 import prisma from "../lib/prisma"
 
-
-export default async function BLogSection() {
+export async function getStaticProps() {
     const blogs = await prisma.blog.findMany()
+
+    return {
+        props: {
+            blogs,
+        },
+        revalidate: 1,
+    }
+}
+
+
+export default async function BLogSection({ blogs }) {
+
     return (
         <div className="grid md:grid-cols-3 gap-3 grid-cols-1">
             <div className="w-full px-4">
-                <div className="mx-auto w-full max-w-2x rounded shadow shadow-black  border border-main-gray bg-gray-600 text-main-white p-2">
-                    {blogs.map((blog) => (
+                {blogs.map((blog) => (
+                    <div className="mx-auto w-full max-w-2x rounded shadow shadow-black  border border-main-gray bg-gray-600 text-main-white p-2">
                         <ul key={blog.id}>
                             <li>{blog.title}</li>
                             <li>{blog.content}</li>
                         </ul>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
         </div>
     )
