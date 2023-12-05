@@ -22,6 +22,14 @@ type HandleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement
 type HandleSubmit = (e: React.FormEvent<HTMLFormElement>) => Promise<void>;
 
 export const useEmail = (): [FormState, HandleChange, HandleSubmit] => {
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
+
+    if (!serviceId || !templateId || !userId) {
+        throw new Error('Environment variables not defined');
+    }
+
     const [form, setForm] = useState<FormState>(initialFormState);
 
     const handleChange: HandleChange = (e) => {
@@ -32,10 +40,10 @@ export const useEmail = (): [FormState, HandleChange, HandleSubmit] => {
     const sendEmail = async () => {
         try {
             const result = await emailjs.send(
-                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+                serviceId,
+                templateId,
                 form,
-                process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+                userId
             );
 
             console.log(result);
