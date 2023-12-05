@@ -1,7 +1,7 @@
 
 import prisma from "../lib/prisma"
 
-export async function getStaticProps() {
+export async function getBLogs() {
 
     const blogs = await prisma.blog.findMany()
 
