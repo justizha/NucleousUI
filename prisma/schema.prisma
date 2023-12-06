@@ -8,11 +8,12 @@ datasource db {
 }
 
 model Blog {
-  id        Int      @id @default(autoincrement())
+  id        Int       @id @default(autoincrement())
   title     String
   content   String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  Comment   Comment[]
 }
 
 model User {
@@ -28,8 +29,10 @@ model User {
 model Comment {
   id        Int      @id @default(autoincrement())
   userId    Int
+  blogId    Int
   content   String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  User      User     @relation(fields: [userId], references: [id])
+  Blog      Blog     @relation(fields: [blogId], onDelete: Cascade, references: [id])
+  User      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
