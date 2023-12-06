@@ -34,17 +34,8 @@ CREATE TABLE "Comment" (
     CONSTRAINT "Comment_pkey" PRIMARY KEY ("id")
 );
 
--- CreateTable
-CREATE TABLE "Suggestion" (
-    "id" SERIAL NOT NULL,
-    "userId" INTEGER NOT NULL,
-    "title" TEXT NOT NULL,
-    "content" TEXT NOT NULL,
-    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" TIMESTAMP(3) NOT NULL,
 
-    CONSTRAINT "Suggestion_pkey" PRIMARY KEY ("id")
-);
+
 
 -- CreateIndex
 CREATE UNIQUE INDEX "User_githubId_key" ON "User"("githubId");

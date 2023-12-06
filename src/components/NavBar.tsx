@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { FileText, HelpCircle, LayoutGrid, Mail, Newspaper, Palette } from "lucide-react";
+import { FileText, HelpCircle, LayoutGrid, Mail, Palette } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -19,7 +19,7 @@ export default function NavBar() {
     ]
     const LinkRightSide = [
         { href: "/about", title: "About" },
-        { href: "/blogs", title: "Blogs" },
+        // { href: "/blogs", title: "Blogs" },
         { href: "/#contact", title: "Contact" }
     ]
     const path = usePathname()
@@ -82,13 +82,13 @@ export default function NavBar() {
                                 <Link href={'/#contact'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-main-accent hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2' onClick={handleClick}>
                                     <Mail />Contact
                                 </Link>
-                                <Link href={'/#'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-main-accent hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2' onClick={handleClick}>
+                                {/* <Link href={'/#'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-main-accent hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2' onClick={handleClick}>
                                     <Newspaper />Blogs
-                                </Link>
+                                </Link> */}
                                 <Link href={'/about'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-main-accent hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2' onClick={handleClick}>
                                     <Palette />Design
                                 </Link>
-                                <Link href={'/#'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-main-accent hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2' onClick={handleClick}>
+                                <Link href={'/documentation'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-main-accent hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2' onClick={handleClick}>
                                     <FileText />Documentation
                                 </Link>
                             </ul>

@@ -17,12 +17,12 @@ export default function SideBar() {
                         </Link>
                     </h1>
                     <ul className="ml-2">
-                        <li className="mb-2 text-base text-main-accent font-semibold hover:text-main-white duration-150">
+                        <li className="mb-3 text-base text-main-accent font-semibold hover:text-main-white duration-150">
                             <Link href={'/documentation/buttons'}>Buttons</Link>
                         </li>
-                        <li className="mb-2 text-base text-main-accent font-semibold">Links</li>
-                        <li className="mb-2 text-base text-main-accent font-semibold">Links</li>
-                        <li className="mb-2 text-base text-main-accent font-semibold">Links</li>
+                        <li className="mb-3 text-base text-main-accent font-semibold">Links</li>
+                        <li className="mb-3 text-base text-main-accent font-semibold">Links</li>
+                        <li className="mb-3 text-base text-main-accent font-semibold">Links</li>
                     </ul>
                 </div>
             </div>
