@@ -16,32 +16,19 @@ model Blog {
 }
 
 model User {
-  id         Int          @id @default(autoincrement())
-  githubId   String       @unique
-  username   String
-  avatarUrl  String?
-  name       String?
-  email      String?      @unique
-  createdAt  DateTime     @default(now())
-  updatedAt  DateTime     @updatedAt
-  Comment    Comment[]
-  Suggestion Suggestion[]
+  id        Int       @id @default(autoincrement())
+  username  String
+  name      String?
+  email     String?   @unique
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  Comment   Comment[]
 }
 
 model Comment {
   id        Int      @id @default(autoincrement())
   userId    Int
   content   String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  User      User     @relation(fields: [userId], references: [id])
-}
-
-model Suggestion {
-  id        Int      @id @default(autoincrement())
-  userId    Int
-  title     String
-  content   String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   User      User     @relation(fields: [userId], references: [id])

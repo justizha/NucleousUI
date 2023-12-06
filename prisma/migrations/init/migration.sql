@@ -12,9 +12,7 @@ CREATE TABLE "Blog" (
 -- CreateTable
 CREATE TABLE "User" (
     "id" SERIAL NOT NULL,
-    "githubId" TEXT NOT NULL,
     "username" TEXT NOT NULL,
-    "avatarUrl" TEXT,
     "name" TEXT,
     "email" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
