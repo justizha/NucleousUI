@@ -82,9 +82,6 @@ export default function NavBar() {
                                 <Link href={'/#contact'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-main-accent hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2' onClick={handleClick}>
                                     <Mail />Contact
                                 </Link>
-                                {/* <Link href={'/#'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-main-accent hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2' onClick={handleClick}>
-                                    <Newspaper />Blogs
-                                </Link> */}
                                 <Link href={'/about'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-main-accent hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2' onClick={handleClick}>
                                     <Palette />Design
                                 </Link>
