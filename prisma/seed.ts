@@ -5,18 +5,20 @@ async function main() {
         where: { email: 'alice@prisma.io' },
         update: {},
         create: {
-            email: 'alice@prisma.io',
+            email: 'alice@example.com',
             name: 'Alice',
-            username: "alice12"
+            username: "alice12",
+            password: Math.random().toString()
         },
     })
     const bob = await prisma.user.upsert({
-        where: { email: 'bobters@prisma.io' },
+        where: { email: 'bobters@example.com' },
         update: {},
         create: {
             email: 'bob@prisma.io',
             name: 'Bob',
             username: 'bob122212',
+            password: Math.random().toString()
         },
     })
     const first_blog = await prisma.blog.upsert({
