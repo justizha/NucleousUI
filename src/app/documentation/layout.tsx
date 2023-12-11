@@ -6,9 +6,9 @@ export default function Layout({ children }) {
         <>
             <PageWrapper>
                 <SideBar />
-                <section className="mx-auto">
+                <div className="mx-auto">
                     {children}
-                </section>
+                </div>
             </PageWrapper>
             <div className="flex justify-end">
                 <DocsFooter />

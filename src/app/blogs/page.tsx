@@ -11,7 +11,7 @@ export const dynamic = 'force-dynamic';
 export default async function BLogSection() {
     const blogs = await getBlogs()
     return (
-        <div className="grid md:grid-cols-3 gap-2">
+        <div className="grid md:grid-cols-3 gap-4">
             {blogs.map((blog) => (
                 <div className="mx-auto w-full max-w-2xl rounded shadow shadow-black border border-main-gray bg-gray-600 text-main-white p-2">
                     <div className="text-main-white" key={blog.id}>

@@ -38,24 +38,29 @@ export default function SideBar() {
             {/* BACKDROP */}
             {toggle && (
                 <div
-                    className="fixed inset-0 bg-main-gray backdrop-blur-sm bg-opacity-20 z-30 lg:hidden"
+                    className="fixed inset-0 bg-main-gray backdrop-blur-sm bg-opacity-20 z-50 lg:hidden"
                     onClick={handleClick}
                 ></div>
             )}
 
             {/* !!SIDEBAR!! */}
 
-            <aside className={`fixed sm:hidden lg:block top-16 left-0 w-72  inset-0 z-40 right-auto pb-10 bg-main-black overflow-y-auto transition-transform ${!toggle ? 'hidden' : 'block'}`}>
-                <div className="flex flex-col m-8">
+            <aside className={`fixed sm:hidden lg:block md:top-16 top-0 left-0 w-72  inset-0 z-50 right-auto pb-10 bg-[#2c3039] overflow-y-auto transition-transform ${!toggle ? 'hidden' : 'block'}`}>
+                <div className="flex flex-col m-4">
 
-                    <h1 className="text-lg font-bold text-main-white mb-2 mt-2 active:text-main-white">
+                    <h1 className="text-lg font-bold text-main-white mb-3 mt-2 active:text-main-white">
                         <Link href={'/documentation'}>
                             Getting Started
                         </Link>
                     </h1>
+
+                    <h1 className="text-lg font-bold text-main-white mb-3">
+                        Components
+                    </h1>
+
                     <ul className="ml-2">
                         {links.map((link) => (
-                            <li className="mb-3 text-lg text-main-accent font-semibold hover:text-main-white duration-150" key={link.href}>
+                            <li className="mb-1 text-base text-main-accent font-semibold hover:text-main-white duration-150" key={link.href}>
                                 <Link href={link.href}>{link.title}</Link>
                             </li>
                         ))}
