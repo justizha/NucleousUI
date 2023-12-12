@@ -29,7 +29,7 @@ export default function Contact() {
                             id="text"
                             name="user_name"
                             type="text"
-                            className="md:w-[80%] w-full gap-2 placeholder:text-gray-300 p-2 bg-transparent border shadow-lg border-gray-400 rounded-md outline-none flex items-center"
+                            className="md:w-[80%] w-full gap-2 placeholder:text-gray-400 p-2 bg-transparent border shadow-lg border-gray-400 rounded-md outline-none flex items-center text-main-white"
                             placeholder="Example name"
                         />
                     </div>
@@ -42,7 +42,7 @@ export default function Contact() {
                             id="email"
                             name="user_email"
                             type="email"
-                            className="md:w-[80%] placeholder:text-gray-300 w-full gap-2 p-2 bg-transparent border shadow-lg border-gray-400 rounded-md outline-none flex items-center"
+                            className="md:w-[80%] placeholder:text-gray-400 w-full gap-2 p-2 bg-transparent border shadow-lg border-gray-400 rounded-md outline-none flex items-center text-main-white"
                             placeholder="Example@gmail.com"
                         />
                     </div>
@@ -53,7 +53,7 @@ export default function Contact() {
                             required
                             name="message"
                             value={form.message}
-                            className="md:w-[80%] w-full gap-2 p-2 bg-transparent border shadow-lg border-gray-400 rounded-md outline-none flex placeholder:text-gray-300 items-center"
+                            className="md:w-[80%] w-full gap-2 p-2 bg-transparent border shadow-lg border-gray-400 rounded-md outline-none flex placeholder:text-gray-400 items-center text-main-white"
                             placeholder="Tell us more...." >
 
                         </textarea>

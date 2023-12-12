@@ -19,7 +19,7 @@ export default function data() {
                             <HelpCircle className="w-4" />
                             {faq.question}
                         </h2>
-                        <p className="text-sm text-start  text-main-gray">
+                        <p className="text-sm text-start  text-main-white">
                             {faq.answers}
                         </p>
                     </div>

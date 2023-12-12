@@ -24,7 +24,8 @@ export default function SideBar() {
     ];
 
     const path = usePathname();
-    const segment = path?.split('/').pop()?.toUpperCase()
+    const segment = path?.split('/').pop()
+    const SegmentRoute = segment ? segment?.charAt(0).toUpperCase() + segment?.slice(1) : '';
 
 
     return (
@@ -51,7 +52,7 @@ export default function SideBar() {
                 <div className="flex flex-col m-4">
 
                     <h1 className="text-lg font-bold text-main-white mb-3 mt-2 active:text-main-white">
-                        Getting Started - {segment}
+                        Getting Started - {SegmentRoute}
                     </h1>
 
                     <h1 className="text-lg font-bold text-main-white mb-3">

@@ -13,11 +13,11 @@ export default async function BLogSection() {
                         <h2 className="font-semibold mb-2">{blog.title}</h2>
                         <p className="text-base mb-2">{blog.content}</p>
                     </div>
-                    <button className="p-2 w-full rounded h-10 bg-main-white bg-opacity-70 hover:bg-opacity-100 duration-150 border border-main-black text-center">
-                        <Link href={`/blogs/${blog.slug}`} className="text-black">
+                    <Link href={`/blogs/${blog.slug}`} className="text-black">
+                        <button className="p-2 w-full rounded h-10 bg-main-white bg-opacity-70 hover:bg-opacity-100 duration-150 border border-main-black text-center">
                             Detail
-                        </Link>
-                    </button>
+                        </button>
+                    </Link>
                 </div>
             ))}
         </div>
