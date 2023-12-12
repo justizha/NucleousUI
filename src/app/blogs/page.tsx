@@ -1,15 +1,11 @@
 import prisma from "../../lib/prisma";
 
-async function getBlogs() {
 
-    const blogs = await prisma.blog.findMany()
 
-    return blogs
-}
 export const dynamic = 'force-dynamic';
 
 export default async function BLogSection() {
-    const blogs = await getBlogs()
+    const blogs = await prisma.blog.findMany()
     return (
         <div className="grid md:grid-cols-3 gap-4">
             {blogs.map((blog) => (

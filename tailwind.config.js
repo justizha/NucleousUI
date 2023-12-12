@@ -22,6 +22,7 @@ module.exports = {
         'main-gray' : '#A9A9A9',
         'main-accent' : "#636d83",
         'main-blue' : "#007BFF",
+        'main-dark' : "#1f2229"
       },
       boxShadow : {
         card: "#a9a9a9",

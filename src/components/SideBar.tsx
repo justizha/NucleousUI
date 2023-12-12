@@ -5,7 +5,6 @@ import { useState } from "react";
 
 export default function SideBar() {
     const [toggle, setToggle] = useState(false);
-
     const handleClick = () => {
         setToggle(!toggle);
     };
@@ -25,6 +24,9 @@ export default function SideBar() {
     ];
 
     const path = usePathname();
+    const segment = path?.split('/').pop()?.toUpperCase()
+
+
     return (
         <>
             <nav className="fixed lg:hidden top-16 py-2 flex items-center bg-main-black border-b border-main-accent w-full">
@@ -33,7 +35,7 @@ export default function SideBar() {
                         <path clipRule="evenodd" fillRule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
                     </svg>
                 </button>
-                <h3 className="text-main-white">Getting Started</h3>
+                <h3 className="text-main-white">Getting Started </h3>
             </nav>
             {/* BACKDROP */}
             {toggle && (
@@ -49,9 +51,7 @@ export default function SideBar() {
                 <div className="flex flex-col m-4">
 
                     <h1 className="text-lg font-bold text-main-white mb-3 mt-2 active:text-main-white">
-                        <Link href={'/documentation'}>
-                            Getting Started
-                        </Link>
+                        Getting Started - {segment}
                     </h1>
 
                     <h1 className="text-lg font-bold text-main-white mb-3">

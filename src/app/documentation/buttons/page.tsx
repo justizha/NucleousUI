@@ -1,7 +1,8 @@
+import DocsSection from "../../../components/DocsSection"
 export default function Buttons() {
     return (
-        <section className="pt-20 sm:ml-64">
+        <DocsSection>
             <h1 className="text-white text-4xl">Buttons</h1>
-        </section>
+        </DocsSection>
     )
 }

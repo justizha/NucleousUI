@@ -26,7 +26,8 @@ async function main() {
         update: {},
         create: {
             title: "test",
-            content: "this is jus a dummy content nothing to see here"
+            content: "this is jus a dummy content nothing to see here",
+            slug: "test"
         }
     })
     const firstComment = await prisma.comment.upsert({
