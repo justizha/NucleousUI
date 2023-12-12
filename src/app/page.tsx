@@ -11,13 +11,11 @@ export default function Home() {
       <PageWrapper>
         <section className="bg-main-black">
           <Hero />
-          {/* <Frameworks /> */}
           <CodeHighlight />
           <Faq />
           <Contact />
         </section>
       </PageWrapper>
-
       <Footer />
     </>
   )

@@ -1,6 +1,5 @@
+import Link from "next/link";
 import prisma from "../../lib/prisma";
-
-
 
 export const dynamic = 'force-dynamic';
 
@@ -15,9 +14,9 @@ export default async function BLogSection() {
                         <p className="text-base mb-2">{blog.content}</p>
                     </div>
                     <button className="p-2 w-full rounded h-10 bg-main-white bg-opacity-70 hover:bg-opacity-100 duration-150 border border-main-black text-center">
-                        <a href="#" className="text-black">
+                        <Link href={`/blogs/${blog.slug}`} className="text-black">
                             Detail
-                        </a>
+                        </Link>
                     </button>
                 </div>
             ))}
