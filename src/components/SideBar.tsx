@@ -52,11 +52,17 @@ export default function SideBar() {
                 <div className="flex flex-col m-4">
 
                     <h1 className="text-lg font-bold text-main-white mb-3 mt-2 active:text-main-white">
-                        Getting Started - {SegmentRoute}
+                        Getting Started
                     </h1>
 
+                    <ul className="ml-2">
+                        <li className="mb-1 text-base text-main-accent font-semibold hover:text-main-white duration-150">
+                            <Link href={'/documentation'}>Introduction</Link>
+                        </li>
+                    </ul>
+
                     <h1 className="text-lg font-bold text-main-white mb-3">
-                        Components
+                        Components {/*  {SegmentRoute} */}
                     </h1>
 
                     <ul className="ml-2">

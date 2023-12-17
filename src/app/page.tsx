@@ -1,7 +1,6 @@
 "use client"
 import Footer from "../components/Footer"
 import PageWrapper from "../components/PageWrapper"
-import CodeHighlight from "./sections/CodeHighlight"
 import Contact from "./sections/Contact"
 import Faq from "./sections/Faq"
 import Hero from "./sections/Hero"
@@ -11,7 +10,7 @@ export default function Home() {
       <PageWrapper>
         <section className="bg-main-black">
           <Hero />
-          <CodeHighlight />
+
           <Faq />
           <Contact />
         </section>
