@@ -28,13 +28,13 @@ export default function NavBar() {
         <header className='w-full h-16 border-b flex justify-between border-main-accent fixed z-50 bg-main-black '>
             <ul className="flex items-center gap-8">
                 <li>
-                    <Link href={'/'} className='font-black text-[32px] ml-2 flex gap-1 items-center cursor-pointer text-white'>
+                    <Link href={'/'} className='font-semibold text-[32px] ml-2 flex gap-1 items-center cursor-pointer text-white'>
                         <LayoutGrid className="text-main-blue" />    NexT
                     </Link>
                 </li>
                 {LinkLeftSide.map((link) => (
                     <li key={link.href} className="md:flex hidden">
-                        <Link href={link.href} className={`text-gray-400 relative hover:text-gray-200 duration-150  text-base ${link.href === path ? 'activeLink' : ''}`} >
+                        <Link href={link.href} className={`text-gray-400 relative hover:text-gray-200 duration-150 text-base ${link.href === path ? 'activeLink' : ''}`} >
                             {link.href === path && (
                                 <motion.span
                                     layoutId="underline"

@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function SideBar() {
@@ -24,6 +24,8 @@ export default function SideBar() {
     ];
 
     const path = usePathname();
+    const route = useRouter();
+
     const segment = path?.split('/').pop()
     const SegmentRoute = segment ? segment?.charAt(0).toUpperCase() + segment?.slice(1) : '';
 
@@ -50,13 +52,12 @@ export default function SideBar() {
 
             <aside className={`fixed sm:hidden lg:block md:top-16 top-0 left-0 w-72  inset-0 z-50 right-auto pb-10 bg-[#2c3039] overflow-y-auto transition-transform ${!toggle ? 'hidden' : 'block'}`}>
                 <div className="flex flex-col m-4">
-
                     <h1 className="text-lg font-bold text-main-white mb-3 mt-2 active:text-main-white">
                         Getting Started
                     </h1>
 
                     <ul className="ml-2">
-                        <li className="mb-1 text-base text-main-accent font-semibold hover:text-main-white duration-150">
+                        <li className={`mb-1 text-base text-main-accent font-semibold hover:text-main-white duration-150 ${path === '/documentation' ? 'activeLink' : ''}`}>
                             <Link href={'/documentation'}>Introduction</Link>
                         </li>
                     </ul>
@@ -67,13 +68,13 @@ export default function SideBar() {
 
                     <ul className="ml-2">
                         {links.map((link) => (
-                            <li className="mb-1 text-base text-main-accent font-semibold hover:text-main-white duration-150" key={link.href}>
+                            <li className={`mb-1 text-base text-main-accent font-semibold hover:text-main-white duration-150 ${link.href === path ? 'activeLink' : ''}`} key={link.href}>
                                 <Link href={link.href}>{link.title}</Link>
                             </li>
                         ))}
                     </ul>
                 </div>
-            </aside>
+            </aside >
         </>
     );
 }
