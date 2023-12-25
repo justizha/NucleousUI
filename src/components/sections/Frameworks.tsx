@@ -1,6 +1,6 @@
 'use client'
 import Marquee from "react-fast-marquee";
-import Framework from "../json/Framework.json";
+import Framework from "../../app/json/Framework.json";
 export default function Frameworks() {
     return (
         <section className="pt-20 pb-20">

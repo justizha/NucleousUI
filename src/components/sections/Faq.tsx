@@ -1,7 +1,7 @@
 'use client';
 
 import { HelpCircle } from "lucide-react";
-import faq from '../json/Faq.json';
+import faq from '../../app/json/Faq.json';
 
 export default function data() {
 
@@ -14,7 +14,7 @@ export default function data() {
             </div>
             <div className="pt-5 grid gap-4 md:grid-cols-2 mx-4">
                 {faq.map((faq) => (
-                    <div className="bg-main-accent p-2 rounded" key={faq.id}>
+                    <div className="bg-main-accent bg-opacity-30 p-2 rounded" key={faq.id}>
                         <h2 className="text-base font-semibold flex  mb-2 gap-1 text-main-white">
                             <HelpCircle className="w-4" />
                             {faq.question}

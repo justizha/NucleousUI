@@ -5,9 +5,8 @@ export const metadata = {
   title: 'NextComponent',
 }
 const InterFont = Inter({
-  weight: "400",
-  subsets: ['latin'],
-  display: 'swap'
+  weight: "variable",
+  subsets: ['latin']
 })
 export default function RootLayout({ children }) {
   return (

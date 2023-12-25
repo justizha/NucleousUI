@@ -18,7 +18,7 @@ export default function Contact() {
                 <form
                     autoComplete="off"
                     onSubmit={handleSubmit}
-                    className="w-full p-6 bg-main-accent rounded-lg shadow-lg "
+                    className="w-full p-6 bg-main-accent bg-opacity-25 rounded-lg shadow-lg "
                 >
                     <div className="flex md:flex-row flex-col items-start mb-5 justify-between">
                         <h3 className="text-base text-main-white mb-2">Name</h3>

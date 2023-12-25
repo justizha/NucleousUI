@@ -14,7 +14,7 @@ export default function NavBar() {
     const menu = "menu.svg";
     const close = "close.svg";
     const LinkLeftSide = [
-        { href: "/design", title: "Design" },
+        { href: "/underconstructions", title: "Example" },
         { href: "/documentation", title: "Docs" },
     ]
     const LinkRightSide = [
