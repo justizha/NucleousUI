@@ -13,28 +13,25 @@ export default function NavBar() {
 
     const menu = "menu.svg";
     const close = "close.svg";
-    const LinkLeftSide = [
+    const NavLink = [
         { href: "/underconstructions", title: "Example" },
         { href: "/documentation", title: "Docs" },
-    ]
-    const LinkRightSide = [
-        { href: "/about", title: "About" },
-        // { href: "/blogs", title: "Blogs" },
         { href: "/#contact", title: "Contact" }
     ]
+
     const path = usePathname()
 
     return (
         <header className='w-full h-16 border-b flex justify-between border-main-accent fixed z-50 bg-main-black '>
             <ul className="flex items-center gap-8">
                 <li>
-                    <Link href={'/'} className='font-semibold text-[32px] ml-2 flex gap-1 items-center cursor-pointer text-white'>
+                    <Link href={'/'} className='font-semibold text-[30px] ml-2 flex gap-1 items-center cursor-pointer text-white'>
                         <LayoutGrid className="text-main-blue" />    NexT
                     </Link>
                 </li>
-                {LinkLeftSide.map((link) => (
+                {NavLink.map((link) => (
                     <li key={link.href} className="md:flex hidden">
-                        <Link href={link.href} className={`text-gray-400 relative hover:text-gray-200 duration-150 text-base ${link.href === path ? 'activeLink' : ''}`} >
+                        <Link href={link.href} className={`text-gray-400 relative hover:text-gray-200 duration-150 text-sm ${link.href === path ? 'activeLink' : ''}`} >
                             {link.href === path && (
                                 <motion.span
                                     layoutId="underline"
@@ -45,23 +42,9 @@ export default function NavBar() {
                     </li>
                 ))}
             </ul>
-            <ul className='gap-8 mx-4 md:flex hidden items-center'>
-                {LinkRightSide.map((link) => (
-                    <li className=' text-base' key={link.href}>
-                        <Link href={link.href} className={`text-gray-400 relative hover:text-gray-200 duration-150  text-base ${link.href === path ? 'activeLink' : ''}`} >
-                            {link.href === path && (
-                                <motion.span
-                                    layoutId="underline"
-                                    className="absolute left-0 top-full mt-1 h-[1px] bg-main-white w-full" />
-                            )}
-                            {link.title}
-                        </Link>
-                    </li>
-                ))}
-
-            </ul>
+            <div className="md:flex hidden items-center mx-4">
+            </div>
             <div className="md:hidden flex flex-1 justify-end items-center ">
-
                 <div className="md:hidden flex flex-1 justify-end items-center mx-4">
                     <div className="grid place-items-center ">
                         <button onClick={handleClick} className='flex items-center justify-center h-10 w-10'>

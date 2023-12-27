@@ -1,6 +1,7 @@
 'use client';
 
-import { HelpCircle } from "lucide-react";
+import { Disclosure } from '@headlessui/react';
+import { ChevronDown } from 'lucide-react';
 import faq from '../../app/json/Faq.json';
 
 export default function data() {
@@ -12,19 +13,23 @@ export default function data() {
                     Frequently asked questions
                 </h1>
             </div>
-            <div className="pt-5 grid gap-4 md:grid-cols-2 mx-4">
-                {faq.map((faq) => (
-                    <div className="bg-main-accent bg-opacity-30 p-2 rounded" key={faq.id}>
-                        <h2 className="text-base font-semibold flex  mb-2 gap-1 text-main-white">
-                            <HelpCircle className="w-4" />
-                            {faq.question}
-                        </h2>
-                        <p className="text-sm text-start  text-main-white">
-                            {faq.answers}
-                        </p>
-                    </div>
-                ))}
-            </div>
-        </section>
+            <div className="pt-5 mx-4 w-1/2 ">
+                <div className="flex flex-col gap-2">
+                    {faq.map((faq) => (
+                        <Disclosure key={faq.id}>
+                            <Disclosure.Button className=" flex justify-between rounded p-2 bg-main-accent bg-opacity-40">
+                                <h2 className="text-base font-semibold flex  mb-2 gap-1 text-main-white">
+                                    {faq.question}
+                                </h2>
+                                <ChevronDown className='text-main-white' />
+                            </Disclosure.Button>
+                            <Disclosure.Panel className="px-3 text-sm py-2 text-main-white">
+                                {faq.answers}
+                            </Disclosure.Panel>
+                        </Disclosure>
+                    ))}
+                </div>
+            </div >
+        </section >
     )
 }

@@ -1,5 +1,8 @@
+"use client"
 import Button from "../Button";
 import Paragraph from "../Paragraph";
+import SearchModal from "../SearchModal";
+
 export default function Hero() {
     return (
         <section className="px-4 lg:pt-22 lg:pb-10 pt-32 pb-32">
@@ -12,6 +15,7 @@ export default function Hero() {
                     <div className="flex justify-center mt-14 gap-2">
                         <Button>Components</Button>
                         <Button>Get Started</Button>
+                        <SearchModal />
                     </div>
                 </div>
             </div>
