@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google';
 import NavBar from '../components/NavBar';
 import './globals.css';
 export const metadata = {
-  title: 'NextComponent',
+  title: 'NucleousUi',
 }
 const InterFont = Inter({
   weight: "variable",

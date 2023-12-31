@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { FileText, HelpCircle, LayoutGrid, Mail, Palette } from "lucide-react";
+import { LayoutGrid } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -14,8 +14,8 @@ export default function NavBar() {
     const menu = "menu.svg";
     const close = "close.svg";
     const NavLink = [
-        { href: "/underconstructions", title: "Example" },
         { href: "/documentation", title: "Docs" },
+        { href: "/underconstructions", title: "Example" },
         { href: "/#contact", title: "Contact" }
     ]
 
@@ -25,8 +25,8 @@ export default function NavBar() {
         <header className='w-full h-16 border-b flex justify-between border-main-accent fixed  bg-main-black '>
             <ul className="flex items-center gap-8">
                 <li>
-                    <Link href={'/'} className='font-semibold text-[30px] ml-2 flex gap-1 items-center cursor-pointer text-white'>
-                        <LayoutGrid className="text-main-blue" />    NexT
+                    <Link href={'/'} className='font-semibold text-[24px] lg:text-[30px] ml-2 flex gap-1 items-center cursor-pointer text-white'>
+                        <LayoutGrid className="text-main-blue" />    NucleousUI
                     </Link>
                 </li>
                 {NavLink.map((link) => (
@@ -49,29 +49,31 @@ export default function NavBar() {
                     <div className="grid place-items-center ">
                         <button onClick={handleClick} className='flex items-center justify-center h-10 w-10'>
                             <img
-                                src={isOpen ? close : menu}
+                                src={menu}
                                 alt="menu"
-                                className='rounded bg-opacity-60 bg-main-accent w-[35px] cursor-pointer transition-opacity duration 700 p-2  mt-3 '
+                                className=' w-[35px] cursor-pointer transition-opacity duration 700 p-2  mt-3 '
                             />
                         </button>
                     </div>
-
                     {isOpen && (
-                        <div className='absolute right-0 top-16  w-[70%] overflow-y-auto h-screen origin-top-right  bg-main-black z-50 border-l py-4 border-main-accent'>
-                            <ul className="list-none mx-4 text-start flex justify-center flex-col mt-1 gap-2">
-                                <Link href={'/about'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-main-accent hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2' onClick={handleClick}>
-                                    <HelpCircle />About
-                                </Link>
-                                <Link href={'/#contact'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-main-accent hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2' onClick={handleClick}>
-                                    <Mail />Contact
-                                </Link>
-                                <Link href={'/about'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-main-accent hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2' onClick={handleClick}>
-                                    <Palette />Design
-                                </Link>
-                                <Link href={'/documentation'} className='text-base flex gap-1 text-main-white bg-opacity-95 bg-main-accent hover:bg-opacity-70 hover:text-gray-200 duration-150 rounded max-w-sm px-4 py-2' onClick={handleClick}>
-                                    <FileText />Documentation
-                                </Link>
-                            </ul>
+                        <div
+                            className="fixed inset-0 bg-main-blue/10 backdrop-blur-sm bg-opacity-20 z-50 lg:hidden"
+                            onClick={handleClick}
+                        ></div>
+                    )}
+                    {isOpen && (
+                        <div className='fixed right-4 top-10  w-full max-w-xs shadow-lg h-1/2 rounded-lg bg-main-black z-50 py-4'>
+                            {NavLink.map((link) => (
+                                <ul className="list-none mx-4 text-start flex justify-center flex-col mt-1 gap-1" key={link.href}>
+                                    <li >
+                                        <Link
+                                            href={link.href}
+                                            className='text-base flex gap-1 text-main-white hover:bg-opacity-70 hover:text-gray-200 duration-150  max-w-sm px-4 py-2' onClick={handleClick}>
+                                            {link.title}
+                                        </Link>
+                                    </li>
+                                </ul>
+                            ))}
                         </div>
                     )}
                 </div>
