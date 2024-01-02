@@ -42,8 +42,6 @@ export default function NavBar() {
                     </li>
                 ))}
             </ul>
-            <div className="md:flex hidden items-center mx-4">
-            </div>
             <div className="md:hidden flex flex-1 justify-end items-center ">
                 <div className="md:hidden flex flex-1 justify-end items-center mx-4">
                     <div className="grid place-items-center ">
@@ -57,12 +55,12 @@ export default function NavBar() {
                     </div>
                     {isOpen && (
                         <div
-                            className="fixed inset-0 bg-main-blue/10 backdrop-blur-sm bg-opacity-20 z-50 lg:hidden"
+                            className="fixed inset-0 bg-main-blue/10 backdrop-blur-sm bg-opacity-20 z-[200] lg:hidden"
                             onClick={handleClick}
                         ></div>
                     )}
                     {isOpen && (
-                        <div className='fixed right-4 top-10  w-full max-w-xs shadow-lg h-1/2 rounded-lg bg-main-black z-50 py-4'>
+                        <div className='fixed right-4 top-10  w-full max-w-xs shadow-lg h-1/2 rounded-lg bg-main-black z-[200] py-4'>
                             {NavLink.map((link) => (
                                 <ul className="list-none mx-4 text-start flex justify-center flex-col mt-1 gap-1" key={link.href}>
                                     <li >

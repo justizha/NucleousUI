@@ -5,8 +5,9 @@ export default function Layout({ children }) {
     return (
         <>
             <PageWrapper>
-                <SideBar />
+
                 <div className="mx-auto">
+                    <SideBar />
                     {children}
                 </div>
             </PageWrapper>

@@ -1,17 +1,30 @@
 "use client"
-import { Dialog, Transition } from "@headlessui/react"
-import { Fragment, useState } from "react"
+import { Dialog, Transition } from "@headlessui/react";
+import { Fragment, useEffect, useState } from "react";
 export default function SearchModal() {
     const [isOpen, setIsOpen] = useState(false)
+
+    useEffect(() => {
+        const handleKeyDown = (event) => {
+            if (event.ctrlKey && event.key === 'k') {
+                event.preventDefault()
+                setIsOpen(true);
+            }
+        };
+        window.addEventListener('keydown', handleKeyDown);
+        return () => {
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, []);
+
+
     return (
         <>
             <button
-                className="rounded h-5 bg-main-accent bg-opacity-50 w-20 text-start"
-                placeholder="Search..."
-                onClick={() => { setIsOpen(true) }}
-            >
-                <p className="text-sm text-main-white text-opacity-50 px-2">
-                    Search...
+                className="rounded  py-3 bg-main-accent/75 hover:bg-main-accent bg-opacity-50 p-2 text-center"
+                onClick={() => { setIsOpen(true) }} >
+                <p className="text-base text-opacity-50 px-2">
+                    Quick Search
                 </p>
             </button>
             <Transition show={isOpen} as={Fragment}>
@@ -25,7 +38,7 @@ export default function SearchModal() {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <div className="fixed inset-0 bg-black/25" />
+                        <div className="fixed inset-0 bg-main-black backdrop-blur-sm" />
                     </Transition.Child>
 
                     <div className="fixed inset-0 overflow-y-auto">
@@ -39,7 +52,7 @@ export default function SearchModal() {
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                                <Dialog.Panel className="w-full max-w-3xl h-[75vh] transform overflow-hidden rounded-2xl bg-main-black p-6 text-left align-middle shadow-xl transition-all">
                                     <Dialog.Title
                                         as="h3"
                                         className="text-lg font-medium leading-6 text-gray-900"
