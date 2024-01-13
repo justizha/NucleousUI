@@ -1,5 +1,4 @@
 "use client"
-import Button from "../Button";
 import Paragraph from "../Paragraph";
 import SearchModal from "../SearchModal";
 
@@ -13,8 +12,7 @@ export default function Hero() {
                     </h1>
                     <Paragraph text={'Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, aut.'} />
                     <div className="flex justify-center mt-14 gap-2">
-                        <Button>Components</Button>
-                        <Button>Get Started</Button>
+                            
                         <SearchModal />
                     </div>
                 </div>
