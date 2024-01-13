@@ -10,7 +10,6 @@ interface FormState {
     message: string;
 }
 
-
 const initialFormState: FormState = {
     user_name: "",
     user_email: "",
@@ -18,7 +17,6 @@ const initialFormState: FormState = {
 };
 
 type HandleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
-
 type HandleSubmit = (e: React.FormEvent<HTMLFormElement>) => Promise<void>;
 
 export const useEmail = (): [FormState, HandleChange, HandleSubmit] => {
@@ -45,7 +43,6 @@ export const useEmail = (): [FormState, HandleChange, HandleSubmit] => {
                 form,
                 userId
             );
-
             console.log(result);
             MySwal.fire({
                 title: `<h2>Message Sent!</h2>`,
@@ -61,11 +58,9 @@ export const useEmail = (): [FormState, HandleChange, HandleSubmit] => {
             });
         }
     };
-
     const handleSubmit: HandleSubmit = async (e) => {
         e.preventDefault();
         await sendEmail();
     };
-
     return [form, handleChange, handleSubmit];
 }
