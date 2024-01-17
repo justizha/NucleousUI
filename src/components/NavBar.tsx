@@ -14,7 +14,7 @@ export default function NavBar() {
     const NavLink = [
         { href: "/documentation", title: "Docs" },
         { href: "/underconstructions", title: "Example" },
-        { href: "/#contact", title: "Contact" }
+        { href: "/#feedback", title: "Feedback" }
     ]
 
     const path = usePathname()

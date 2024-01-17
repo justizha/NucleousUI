@@ -43,7 +43,7 @@ export const useEmail = (): [FormState, HandleChange, HandleSubmit] => {
                 form,
                 userId
             );
-            console.log(result);
+            console.table(result);
             MySwal.fire({
                 title: `<h2>Message Sent!</h2>`,
                 icon: 'success',
