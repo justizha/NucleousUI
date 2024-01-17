@@ -6,9 +6,6 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
-
-
-
     const menu = "menu.svg";
     const close = "close.svg";
     const NavLink = [
