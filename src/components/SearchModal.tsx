@@ -21,11 +21,14 @@ export default function SearchModal() {
     return (
         <>
             <button
-                className="rounded text-white/60 px-3 py-3 bg-main-accent/75 hover:bg-main-accent bg-opacity-50 inline-flex items-center"
+                className=" text-white font-semibold h-12 px-6 rounded w-full flex items-center justify-center sm:w-auto bg-main-gray/30 space-x-10"
                 onClick={() => { setIsOpen(true) }} >
-                <p className="text-base text-opacity-50 px-2 sm:w-full ">
+                <span className="text-base text-opacity-50">
                     Quick Search...
-                </p>
+                </span>
+                <span className="text-base text-opacity-50">
+                    Ctrl + K
+                </span>
             </button>
             <Transition show={isOpen} as={Fragment}>
                 <Dialog as="div" className="relative z-10" onClose={() => { setIsOpen(false) }}>
@@ -57,9 +60,9 @@ export default function SearchModal() {
                                         as="h3"
                                         className="text-lg font-medium leading-6 text-gray-900"
                                     >
-                                        
+
                                     </Dialog.Title>
-                                    
+
                                 </Dialog.Panel>
                             </Transition.Child>
                         </div>

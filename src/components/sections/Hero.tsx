@@ -1,18 +1,23 @@
 "use client"
+import Link from "next/link";
 import Paragraph from "../Paragraph";
 import SearchModal from "../SearchModal";
 
 export default function Hero() {
     return (
-        <section className="px-4 lg:pt-22 lg:pb-10 pt-32 pb-32">
-            <div className="px-4 flex justify-center lg:px-4 z-10 py-4 md:text-center">
-                <div className="flex flex-col px-4">
-                    <h1 className="font-bold lg:font-extrabold lg:text-6xl md:text-4xl text-[42px] mb-8 text-main-white text-center tracking-tight">
-                        The Minimalist web components on top of Tailwind CSS
+        <section className="px-4 lg:pt-48 lg:pb-10 pt-28 pb-32">
+            <div className="px-2 flex justify-center lg:px-4 z-10 py-4 md:text-center">
+                <div className="flex flex-col">
+                    <h1 className="font-bold lg:font-extrabold lg:text-6xl md:text-4xl text-[40px] mb-8 text-main-white tracking-tight lg:leading-none lg:text-center">
+                        The Minimalist UI Library on top of Tailwind CSS
                     </h1>
-                    <Paragraph text={'Lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, aut.'} />
-                    <div className="flex justify-center mt-14 gap-2">
-                            
+                    <p className="text-main-white text-lg font-normal">
+                        Minimalist and easy to use Web Components on top of Tailwind CSS
+                    </p>
+                    <div className="flex justify-center mt-4 gap-2 sm:flex-row flex-col">
+                        <Link href={'/documentation'} className="w-full h-12 bg-main-blue rounded-md text-main-white text-base flex justify-center font-semibold items-center sm:w-auto px-6">
+                            Get Started
+                        </Link>
                         <SearchModal />
                     </div>
                 </div>

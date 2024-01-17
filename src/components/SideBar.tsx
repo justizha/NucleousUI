@@ -54,21 +54,21 @@ export default function SideBar() {
             </div>
             <aside className={`fixed sm:hidden lg:block md:top-16 top-0 left-0 md:w-72 w-80 inset-0 z-30 right-auto pb-10 bg-[#2c3039] overflow-y-auto transition-transform ${!toggle ? 'hidden' : 'block'}`}>
                 <div className="flex flex-col m-4">
-                    <h1 className="text-lg font-bold text-main-white mb-3 mt-2 active:text-main-white">
+                    <h1 className="text-base font-bold text-main-white mb-3 mt-2 active:text-main-white">
                         Getting Started
                     </h1>
 
-                    <ul className="ml-4 mb-3">
+                    <ul className=" mb-3">
                         <li className={`mb-1 text-base text-main-gray  hover:text-main-white duration-150 ${path === '/documentation' ? 'activeLink' : ''}`}>
                             <Link href={'/documentation'}>Introduction</Link>
                         </li>
                     </ul>
 
-                    <h1 className="text-lg font-bold text-main-white mb-3">
+                    <h1 className="text-base font-bold text-main-white mb-3">
                         Components {/*  {SegmentRoute} */}
                     </h1>
 
-                    <ul className="ml-4">
+                    <ul className="">
                         {links.map((link) => (
                             <li className={`mb-3 text-base text-main-gray  hover:text-main-white duration-150 ${link.href === path ? 'activeLink' : ''}`} key={link.href}>
                                 <Link
