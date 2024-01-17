@@ -1,9 +1,11 @@
 "use client"
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useState } from "react";
+import SearchInput from "./SearchInput";
+
+
 export default function SearchModal() {
     const [isOpen, setIsOpen] = useState(false)
-
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.ctrlKey && event.key === 'k') {
@@ -16,8 +18,6 @@ export default function SearchModal() {
             window.removeEventListener('keydown', handleKeyDown);
         };
     }, []);
-
-
     return (
         <>
             <button
@@ -56,13 +56,7 @@ export default function SearchModal() {
                                 leaveTo="opacity-0 scale-95"
                             >
                                 <Dialog.Panel className="w-full max-w-3xl h-[75vh] transform overflow-hidden rounded-2xl bg-main-dark p-6 text-left align-middle shadow-xl transition-all">
-                                    <Dialog.Title
-                                        as="h3"
-                                        className="text-lg font-medium leading-6 text-gray-900"
-                                    >
-
-                                    </Dialog.Title>
-
+                                    <SearchInput/>
                                 </Dialog.Panel>
                             </Transition.Child>
                         </div>
