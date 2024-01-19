@@ -1,6 +1,6 @@
 export default function DocsFooter() {
     return (
-        <footer className="leading-6 mx-4 text-sm py-10 border-t border-main-accent md:ml-80 w-full">
+        <footer className="leading-6 mx-4 text-sm py-10 border-t border-main-accent lg:ml-80 w-full">
             <div className="px-4 m-1 flex justify-between  items-center">
                 <p className="text-main-gray">
                     Copyright © 2023 NucleosUI
