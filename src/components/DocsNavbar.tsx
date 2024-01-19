@@ -3,6 +3,7 @@ import { LayoutGrid } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import SearchModal from "./SearchModal";
 export default function DocsNavBar() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -27,7 +28,8 @@ export default function DocsNavBar() {
                     </Link>
                 </li>
             </ul>
-            <div className=" flex flex-1 justify-end items-center px-4 gap-2">
+            <div className=" flex flex-1 justify-end items-center px-4 gap-5">
+                <SearchModal />
                 <a href="https://github.com/justizha/NucleousUI" target="_blank">
                     <img src="../images/github.png" alt="" className="w-5" />
                 </a>
