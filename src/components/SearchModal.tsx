@@ -41,7 +41,7 @@ export default function SearchModal() {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <div className="fixed inset-0 bg-transparent backdrop-blur-sm" />
+                        <div className="fixed inset-0 bg-white bg-opacity-5 backdrop-blur-[2px]" />
                     </Transition.Child>
 
                     <div className="fixed inset-0 overflow-y-auto">
@@ -55,8 +55,9 @@ export default function SearchModal() {
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="w-full max-w-3xl h-[75vh] transform overflow-hidden rounded-2xl bg-main-dark p-6 text-left align-middle shadow-xl transition-all">
+                                <Dialog.Panel className="w-full max-w-3xl h-[75vh] transform overflow-hidden rounded-2xl bg-main-black p-6 text-left align-middle shadow-xl transition-all">
                                     <SearchInput/>
+
                                 </Dialog.Panel>
                             </Transition.Child>
                         </div>
