@@ -2,9 +2,11 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useEffect, useState } from "react";
 import SearchInput from "./SearchInput";
+import { usePathname } from "next/navigation";
 
 
 export default function SearchModal() {
+    const path = usePathname()
     const [isOpen, setIsOpen] = useState(false)
     useEffect(() => {
         const handleKeyDown = (event) => {
@@ -19,9 +21,9 @@ export default function SearchModal() {
         };
     }, []);
     return (
-        <>
+        <>  
             <button
-                className=" text-white font-semibold h-12 px-6 rounded w-full flex items-center justify-center sm:w-auto bg-main-gray/30 space-x-10"
+                className={`text-white font-semibold h-12 px-6 rounded w-full flex items-center justify-center sm:w-auto bg-main-gray/30 space-x-10 ${path.startsWith('/documentation') ? 'h-8 bg-main-gray/20 px-5 space-x-8' : ''}`}
                 onClick={() => { setIsOpen(true) }} >
                 <span className="text-base text-opacity-50">
                     Quick Search...
