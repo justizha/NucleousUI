@@ -23,7 +23,7 @@ export default function SearchModal() {
     return (
         <>  
             <button
-                className={`text-white font-semibold h-12 px-6 rounded w-full flex items-center justify-center sm:w-auto bg-main-gray/30 space-x-10 ${path.startsWith('/documentation') ? 'h-8 bg-main-gray/20 px-5 space-x-8' : ''}`}
+                className={` text-white font-semibold h-12 px-6 rounded w-full flex items-center justify-center sm:w-auto bg-main-gray/30 space-x-10 ${path.startsWith('/documentation') ? 'h-8 bg-main-gray/20 px-5 space-x-8' : ''}`}
                 onClick={() => { setIsOpen(true) }} >
                 <span className="text-base text-opacity-50">
                     Quick Search...
@@ -43,10 +43,10 @@ export default function SearchModal() {
                         leaveFrom="opacity-100"
                         leaveTo="opacity-0"
                     >
-                        <div className="fixed inset-0 bg-white bg-opacity-5 backdrop-blur-[2px]" />
+                        <div className="fixed z-30 inset-0 bg-white bg-opacity-5 backdrop-blur-[2px]" />
                     </Transition.Child>
 
-                    <div className="fixed inset-0 overflow-y-auto">
+                    <div className="fixed inset-0 z-50 overflow-y-auto">
                         <div className="flex min-h-full items-center justify-center p-4 text-center">
                             <Transition.Child
                                 as={Fragment}
@@ -57,7 +57,7 @@ export default function SearchModal() {
                                 leaveFrom="opacity-100 scale-100"
                                 leaveTo="opacity-0 scale-95"
                             >
-                                <Dialog.Panel className="w-full max-w-3xl h-[75vh] transform overflow-hidden rounded-2xl bg-main-black p-6 text-left align-middle shadow-xl transition-all">
+                                <Dialog.Panel className="w-full max-w-3xl p-2 h-[75vh] transform overflow-hidden rounded-2xl bg-main-black  text-left align-middle shadow-xl transition-all">
                                     <SearchInput/>
 
                                 </Dialog.Panel>

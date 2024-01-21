@@ -1,7 +1,7 @@
 'use client'
+import { FileText } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-
 type Link = {
     id: number;
     href: string;
@@ -32,21 +32,23 @@ export default function SearchInput() {
     return (
         <>
             <div className="relative mt-1">
-                <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-transparent text-left shadow-md focus:outline-none text-base">
+                <div className="relative w-full cursor-default overflow-hidden  bg-transparent text-left shadow-md focus:outline-none text-base">
                     <input
                         type="text"
-                        className="w-full bg-transparent border-none py-2 pl-3 pr-10 text-base leading-5 text-main-white shadow-lg outline-none"
+                        className="w-full bg-transparent  py-2 pl-3 pr-10 text-base leading-5 text-main-white outline-none border-b border-main-gray/60"
                         value={query}
                         onChange={(event) => setQuery(event.target.value)} />
                 </div>
             </div>
-            <div className="flex flex-col gap-2 mt-2">
+            <div className="flex flex-col gap-2 mt-2 w-full">
                 {filteredLinks.length > 0 ? (
                     filteredLinks.map((link) => (
                         <Link
-                            className="text-main-white p-2 rounded-lg shadow-md border border-main-accent/70" 
+                            className="text-main-white text-base py-2 rounded hover:bg-main-accent/25 px-2 flex gap-1 items-center" 
                             key={link.id} 
-                            href={link.href}>{link.title}</Link>
+                            href={link.href}>
+                                <FileText className="w-5"/>{link.title}
+                        </Link>
                     ))
 
                 ) : (

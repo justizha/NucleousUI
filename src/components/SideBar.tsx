@@ -49,7 +49,7 @@ export default function SideBar() {
                     <h3 className="text-main-white">Getting Started </h3>
                 </div>
             </div>
-            <aside className={`fixed lg:block lg:top-16 top-0 left-0 md:w-72 w-80 inset-0 z-30 right-auto pb-10 bg-[#2c3039] overflow-y-auto ${!toggle ? 'hidden' : 'block'}`}>
+            <aside className={`fixed lg:block lg:top-16 top-0 left-0 md:w-72 w-80 inset-0 z-0 right-auto pb-10 bg-[#2c3039] overflow-y-auto ${!toggle ? 'hidden' : 'block'}`}>
                 <div className="flex flex-col m-4">
                     <h1 className="text-base font-bold text-main-white mb-3 mt-2 active:text-main-white">
                         Getting Started
