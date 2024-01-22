@@ -22,7 +22,7 @@ export default function NavBar() {
                 <></>
             ) : (
 
-                <header className='w-full h-16 border-b flex justify-between border-main-accent fixed  bg-main-black '>
+                <header className='w-full h-12 border-b flex justify-between border-main-accent fixed  bg-main-black '>
                     <ul className="flex items-center gap-8">
                         <li>
                             <Link href={'/'} className='font-semibold text-[24px] lg:text-[30px] ml-2 flex gap-1 items-center cursor-pointer text-white'>

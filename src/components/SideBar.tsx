@@ -39,7 +39,7 @@ export default function SideBar() {
             )}
 
             {/* !!SIDEBAR!! */}
-            <div className="fixed lg:hidden  z-0  top-16  py-2 bg-main-black border-b border-main-accent w-full">
+            <div className="fixed lg:hidden z-0 top-16 py-1 bg-main-black border-b border-main-accent w-full">
                 <div className=" flex items-center">
                     <button type="button" onClick={handleClick} className="inline-flex items-center p-1 ms-1 text-sm text-white rounded-lg lg:hidden">
                         <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
