@@ -7,13 +7,13 @@ export default function Docs() {
         <DocsSection>
             <div className="px-4">
                 <div className="mb-10">
-                    <Header title="What is NucleousUI ?" />
-                    <Paragraph text="This is essentially a collection of prebuilt web components, all created using Tailwind CSS. It includes a variety of components like modals, buttons, alerts, and cards. These are part of NucleousUI and are designed to help you design and customize responsive, mobile-first websites quickly and efficiently." />
-                </div>
-                <div className="mb-10">
                     <Header title="Introduction" />
                     <Paragraph text="To use this UI library effectively, it's recommended to have a basic understanding of Tailwind CSS and a good command of CSS. " />
-                    <Paragraph text="Tailwind CSS is a utility-first CSS framework used in many modern UI libraries. Mastering CSS will allow you to customize and create unique designs beyond the default components provided by the library."/>
+                    <Paragraph text="Tailwind CSS is a utility-first CSS framework used in many modern UI libraries. Mastering CSS will allow you to customize and create unique designs beyond the default components provided by the library." />
+                </div>
+                <div className="mb-10">
+                    <Header title="What is NucleousUI ?" />
+                    <Paragraph text="This is essentially a collection of prebuilt web components, all created using Tailwind CSS. It includes a variety of components like modals, buttons, alerts, and cards. These are part of NucleousUI and are designed to help you design and customize responsive, mobile-first websites quickly and efficiently." />
                 </div>
                 <div>
                     <Header title="Tailwind Docs" />

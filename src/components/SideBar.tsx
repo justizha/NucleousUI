@@ -39,7 +39,7 @@ export default function SideBar() {
             )}
 
             {/* !!SIDEBAR!! */}
-            <div className="fixed lg:hidden z-0 top-16 py-1 bg-main-black border-b border-main-accent w-full">
+            <div className="fixed lg:hidden z-0 top-12 py-[1px] bg-main-black border-b border-main-accent w-full">
                 <div className=" flex items-center">
                     <button type="button" onClick={handleClick} className="inline-flex items-center p-1 ms-1 text-sm text-white rounded-lg lg:hidden">
                         <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +49,7 @@ export default function SideBar() {
                     <h3 className="text-main-white">Getting Started </h3>
                 </div>
             </div>
-            <aside className={`fixed lg:block lg:top-16 top-0 left-0 md:w-72 w-80 inset-0 z-20 right-auto pb-10 bg-[#2c3039] overflow-y-auto ${!toggle ? 'hidden' : 'block'}`}>
+            <aside className={`fixed lg:block lg:top-12 top-0 left-0 md:w-72 w-80 inset-0 z-20 right-auto pb-10 bg-[#2c3039] overflow-y-auto ${!toggle ? 'hidden' : 'block'}`}>
                 <button
                     onClick={handleClick} 
                     className="md:hidden absolute top-4 right-3 text-main-white cursor-pointer"
