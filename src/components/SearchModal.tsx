@@ -1,10 +1,9 @@
 "use client"
 import { Dialog, Transition } from "@headlessui/react";
+import { Search } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { Fragment, useEffect, useState } from "react";
 import SearchInput from "./SearchInput";
-import { usePathname } from "next/navigation";
-
-
 export default function SearchModal() {
     const path = usePathname()
     const [isOpen, setIsOpen] = useState(false)
@@ -21,17 +20,40 @@ export default function SearchModal() {
         };
     }, []);
     return (
-        <>  
-            <button
-                className={` text-white font-semibold h-12 px-6 rounded w-full flex items-center justify-center sm:w-auto bg-main-gray/30 space-x-10 ${path.startsWith('/documentation') ? 'h-8 bg-main-gray/20 px-5 space-x-8' : ''}`}
-                onClick={() => { setIsOpen(true) }} >
-                <span className="text-base text-opacity-50">
-                    Quick Search...
-                </span>
-                <span className="text-base text-opacity-50">
-                    Ctrl + K
-                </span>
-            </button>
+        <>
+            {path.startsWith("/documentation") ? (
+
+                <button
+                    className="text-white font-semibold h-10 lg:px-6 md:px-5 px-1  rounded lg:w-72 md:w-52 w-10 flex items-center justify-center bg-main-gray/30  "
+                    onClick={() => { setIsOpen(true) }} >
+                    <div className="hidden md:flex gap-8 ">
+                        <span className="text-base text-opacity-50">
+                            Quick Search...
+                        </span>
+                        <span className="text-base text-opacity-50">
+                            Ctrl + K
+                        </span>
+                    </div>
+                    <div className="md:hidden flex">
+                        <Search />
+                    </div>
+                </button>
+            ) : (
+                <button
+                    className="text-white font-semibold h-12 px-6 rounded w-full flex items-center justify-center sm:w-auto bg-main-gray/30 space-x-10"
+                    onClick={() => { setIsOpen(true) }}>
+                    <span className="text-base text-opacity-50">
+                        Quick Search...
+                    </span>
+                    <span className="text-base text-opacity-50">
+                        Ctrl + K
+                    </span>
+                </button>
+            )
+            }
+
+
+
             <Transition show={isOpen} as={Fragment}>
                 <Dialog as="div" className="relative z-10" onClose={() => { setIsOpen(false) }}>
                     <Transition.Child
@@ -58,8 +80,8 @@ export default function SearchModal() {
                                 leaveTo="opacity-0 scale-95"
                             >
                                 <Dialog.Panel className="w-full max-w-3xl p-2 h-[75vh] transform overflow-hidden rounded-2xl bg-main-black  text-left align-middle shadow-xl transition-all">
-                                    <SearchInput/>
-
+                                    <SearchInput />
+                                        
                                 </Dialog.Panel>
                             </Transition.Child>
                         </div>

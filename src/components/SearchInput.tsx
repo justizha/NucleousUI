@@ -32,10 +32,10 @@ export default function SearchInput() {
     return (
         <>
             <div className="relative mt-1">
-                <div className="relative w-full cursor-default overflow-hidden  bg-transparent text-left shadow-md focus:outline-none text-base">
+                <div className="relative w-full cursor-default overflow-hidden bg-transparent text-left text-base border-b border-main-gray/60">
                     <input
                         type="text"
-                        className="w-full bg-transparent  py-2 pl-3 pr-10 text-base leading-5 text-main-white outline-none border-b border-main-gray/60"
+                        className="w-full bg-transparent  py-2 pl-3 pr-10 text-base leading-5 text-main-white outline-none"
                         value={query}
                         onChange={(event) => setQuery(event.target.value)} />
                 </div>
