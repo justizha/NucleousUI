@@ -14,10 +14,10 @@ export default function SideBar() {
 
 
     const BaseComponents = [
-        { href: '/documentation/alert', title: 'Alerts' },
+        { href: '/underconstructions', title: 'Alerts' },
         { href: '/documentation/buttons', title: 'Buttons' },
-        { href: '/documentation/buttons-groups', title: 'Buttons Groups' },
-        { href: '/documentation/cards', title: 'Cards' },
+        { href: '/underconstructions', title: 'Buttons Groups' },
+        { href: '/underconstructions', title: 'Cards' },
     ];
 
     const path = usePathname();
@@ -49,7 +49,7 @@ export default function SideBar() {
                     <h3 className="text-main-white">Getting Started </h3>
                 </div>
             </div>
-            <aside className={`fixed lg:block lg:top-12 top-0 left-0 md:w-72 w-80 inset-0 z-20 right-auto pb-10 bg-[#2c3039] overflow-y-auto ${!toggle ? 'hidden' : 'block'}`}>
+            <aside className={`fixed lg:block lg:top-12 top-0 left-0 md:w-72 w-80 inset-0 z-10 right-auto pb-10 bg-[#2c3039] overflow-y-auto ${!toggle ? 'hidden' : 'block'}`}>
                 <button
                     onClick={handleClick} 
                     className="md:hidden absolute top-4 right-3 text-main-white cursor-pointer"

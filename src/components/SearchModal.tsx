@@ -24,14 +24,14 @@ export default function SearchModal() {
             {path.startsWith("/documentation") ? (
 
                 <button
-                    className="text-white font-semibold h-10 lg:px-6 md:px-5 px-1  rounded lg:w-72 md:w-52 w-10 flex items-center justify-center bg-main-gray/30  "
+                    className="text-white font-medium py-1 lg:px-4 md:px-2 px-1 rounded lg:w-64 md:w-52 w-10 flex items-center justify-center bg-main-gray/15"
                     onClick={() => { setIsOpen(true) }} >
-                    <div className="hidden md:flex gap-8 ">
-                        <span className="text-base text-opacity-50">
+                    <div className="hidden md:flex gap-[60px] items-center">
+                        <span className="text-sm text-opacity-50">
                             Quick Search...
                         </span>
-                        <span className="text-base text-opacity-50">
-                            Ctrl + K
+                        <span className="text-sm text-opacity-50 p-[2px] rounded bg-main-accent/30">
+                            CtrlK
                         </span>
                     </div>
                     <div className="md:hidden flex">
