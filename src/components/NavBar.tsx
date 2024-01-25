@@ -55,7 +55,7 @@ export default function NavBar() {
                             </div>
                             {isOpen && (
                                 <div
-                                    className="fixed inset-0 bg-main-blue/10 backdrop-blur-sm bg-opacity-20 z-[200] lg:hidden"
+                                    className="fixed inset-0 bg-main-white backdrop-blur-sm bg-opacity-20 z-[200] lg:hidden"
                                     onClick={() => { setIsOpen(!isOpen) }}
                                 ></div>
                             )}

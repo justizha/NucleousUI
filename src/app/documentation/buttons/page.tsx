@@ -49,7 +49,7 @@ export default function Buttons() {
                     <p className="text-main-white/60 text-base">
                         Collections of Buttons for actions in forms , dialogs and more.
                     </p>
-                    <hr className="my-8 border-main-gray lg:mr-80" />
+                    <div className="py-6"/>
                     <h1 className="text-4xl font-bold text-main-white mb-3">
                         Types
                     </h1>
