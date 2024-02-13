@@ -7,7 +7,6 @@ export default function Layout({ children }) {
         <>
             <DocsNavBar />
             <PageWrapper>
-
                 <div className="mx-auto">
                     <SideBar />
                     {children}

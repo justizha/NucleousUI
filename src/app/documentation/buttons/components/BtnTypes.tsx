@@ -17,7 +17,8 @@ export default function BtnTypes() {
         `
 <button className="rounded-lg bg-blue-600 px-4 py-2 font-medium text-white hover:bg-blue-700">Button</button>
 <button className="rounded-lg border border-gray-300 px-4 py-2 font-medium text-white hover:border-blue-600 hover:text-blue-600">Button</button>
-<button className="rounded-lg px-4 py-2 font-medium text-white hover:bg-blue-500/40">Button</button>`
+<button className="rounded-lg px-4 py-2 font-medium text-white hover:bg-blue-500/40">Button</button>
+`
     return (
         <section className="mt-2" id="types_buttons">
             <p className="text-main-blue/80 text-lg font-bold mb-2">
