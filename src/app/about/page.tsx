@@ -1,15 +1,39 @@
+"use client"
 import PageWrapper from "../../components/PageWrapper";
+import Footer from "../../components/Footer";
 export default function About() {
     return (
-        <PageWrapper>
-            <section className="pt-28">
-                <h1 className="text-3xl font-semibold text-white text-start mx-2 md:ml-80">About</h1>
-                <div className="flex flex-col md:justify-center items-center md:mx-0 mx-2">
-                    <p className="md:text-base text-start text-sm font-normal text-main-gray mt-3 md:w-[48%]">
-                        Check out why this website exists and what cool tech stuff it's packing! It's like a digital toolbox that's all about making the web-building process easy and customizable. With a bunch of super cool tools and tricks up its sleeve, this site helps you create awesome and dynamic web content without any hassle
-                    </p>
-                </div>
-            </section>
-        </PageWrapper>
+        <>
+            <PageWrapper>
+                <article className="pt-28">
+                    <h1 className="text-4xl text-center font-semibold text-white ">
+                        About
+                    </h1>
+                </article>
+                <article className="md:mx-40 mx-8 pt-14 lg:mx-80">
+                    <div className="mb-4">
+                        <h2 className="text-lg text-white font-medium">
+                            The Reason Why i made this site.
+                        </h2>
+                        <p className="text-main-gray text-base">
+                            So this project it's started as a learning base project,
+                            i just breaking things and try to fix it by myself,and i though would be
+                            fun if i just make something and that is a ui library. 
+                        </p>   
+                    </div>
+                    <div className="mb-4">
+                        <h2 className="text-lg text-white font-medium">
+                            Why UI Library ?
+                        </h2>
+                        <p className="text-main-gray text-base">
+                            So this project it's started as a learning base project,
+                            i just breaking things and try to fix it by myself,and i though would be
+                            fun if i just make something and that is a ui library. 
+                        </p>   
+                    </div>
+                </article>
+            </PageWrapper>
+            <Footer />
+        </>
     )
 }
