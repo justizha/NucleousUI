@@ -6,9 +6,9 @@ import { atomOneDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 export default function BtnSize() {
     const SizesButtons =
         `
-<button className="rounded-lg bg-blue-600 px-2 py-1 font-medium text-white hover:bg-blue-700">Small</button>
-<button className="rounded-lg bg-blue-600 px-4 py-2 font-medium text-white hover:bg-blue-700">Default</button>
-<button className="rounded-lg bg-blue-600 px-6 py-4 font-medium text-white hover:bg-blue-700">Large</button>`
+<button class="rounded-lg bg-blue-600 px-2 py-1 font-medium text-white hover:bg-blue-700">Small</button>
+<button class="rounded-lg bg-blue-600 px-4 py-2 font-medium text-white hover:bg-blue-700">Default</button>
+<button class="rounded-lg bg-blue-600 px-6 py-4 font-medium text-white hover:bg-blue-700">Large</button>`
 
 
     const [isCopied, setIsCopied] = useState(false)
