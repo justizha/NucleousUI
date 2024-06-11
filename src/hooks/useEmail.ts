@@ -45,14 +45,14 @@ export const useEmail = (): [FormState, HandleChange, HandleSubmit] => {
             );
             console.table(result);
             MySwal.fire({
-                title: `<h2>Message Sent!</h2>`,
+                title: "<h2>Message Sent!</h2>",
                 icon: 'success',
             });
             setForm(initialFormState);
         } catch (error) {
             console.error('Error sending email: ', error);
             MySwal.fire({
-                title: `<h2>Something Went Wrong: /</h2>`,
+                title: "<h2>Something Went Wrong: /</h2>",
                 text: error.message,
                 icon: "error"
             });
