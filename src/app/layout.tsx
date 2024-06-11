@@ -1,22 +1,20 @@
-import { Inter } from 'next/font/google';
-import NavBar from '../components/NavBar';
-import './globals.css';
+import { Inter } from "next/font/google";
+import NavBar from "../components/NavBar";
+import "./globals.css";
 export const metadata = {
-  title: 'NucleousUi',
-}
+  title: "NucleousUi",
+};
 const InterFont = Inter({
   weight: "variable",
-  subsets: ['latin']
-})
+  subsets: ["latin"],
+});
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`scroll-smooth ${InterFont.className}`}>
-      <body className='bg-main-black'>
+      <body className="bg-main-black">
         <NavBar />
-        <main className=''>
-          {children}
-        </main>
+        <main className="relative">{children}</main>
       </body>
     </html>
-  )
+  );
 }

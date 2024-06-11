@@ -1,7 +1,7 @@
 export default function DocsSection({ children }) {
-    return (
-        <section className="lg:pt-24 pt-32 lg:ml-80 border-main-accent max-w-5xl px-4">
-            {children}
-        </section>
-    )
+  return (
+    <section className="max-w-5xl border-main-accent px-4 pt-32 lg:ml-80 lg:pt-24">
+      {children}
+    </section>
+  );
 }

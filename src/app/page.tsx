@@ -1,10 +1,10 @@
-"use client"
-import Footer from "../components/Footer"
-import PageWrapper from "../components/PageWrapper"
-import Contact from "../components/sections/Feedback"
-import Faq from "../components/sections/Faq"
-import GetStarted from "../components/sections/GetStarted"
-import Hero from "../components/sections/Hero"
+"use client";
+import Footer from "../components/Footer";
+import PageWrapper from "../components/PageWrapper";
+import Contact from "../components/sections/Feedback";
+import Faq from "../components/sections/Faq";
+import GetStarted from "../components/sections/GetStarted";
+import Hero from "../components/sections/Hero";
 export default function Home() {
   return (
     <>
@@ -18,5 +18,5 @@ export default function Home() {
       </PageWrapper>
       <Footer />
     </>
-  )
+  );
 }

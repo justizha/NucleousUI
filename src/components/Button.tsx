@@ -1,9 +1,13 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export default function Button(props) {
-    return (
-        <Link href={'/design'} {...props} className="text-lg border rounded p-2 text-main-black bg-main-white  duration-200 cursor-pointer hover:scale-95">
-            {props.children}
-        </Link>
-    )
+  return (
+    <Link
+      href={"/design"}
+      {...props}
+      className="cursor-pointer rounded border bg-main-white p-2 text-lg  text-main-black duration-200 hover:scale-95"
+    >
+      {props.children}
+    </Link>
+  );
 }

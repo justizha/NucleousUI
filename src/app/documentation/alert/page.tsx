@@ -1,8 +1,8 @@
-import DocsSection from "../../../components/DocsSection"
+import DocsSection from "../../../components/DocsSection";
 export default function Alert() {
-    return (
-        <DocsSection>
-            <h1 className="text-main-white text-4xl">ALerts</h1>
-        </DocsSection>
-    )
+  return (
+    <DocsSection>
+      <h1 className="text-4xl text-main-white">ALerts</h1>
+    </DocsSection>
+  );
 }
